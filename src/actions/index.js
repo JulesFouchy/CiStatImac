@@ -1,6 +1,22 @@
 import axios from 'axios'
 
 export default {
+    getCitationsLesPlusLikees: (indexStart, count) => state => {
+        const min = indexStart
+        const max = indexStart + count
+        return { ...state, citationsLesPlusLikees: [
+            {
+                text: 'Je vais goûter pour oublier.',
+                author: 'Emilie confinée',
+                nbLikes: 0
+            },
+            {
+                text: 'C\'est nickel, c\'est gros, c\'est bien.',
+                author: 'Jules Fouchyer',
+                nbLikes: 111
+            }
+        ]}
+    },
     increment: () => state => {
         console.log(state)
         return { ...state, count: state.count + 1 } // on retourne le nouveau state avec notre compteur mis à jour
