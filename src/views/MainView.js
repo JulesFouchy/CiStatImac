@@ -10,7 +10,7 @@ export default (state, actions) =>
             oncreate: () => {
                 actions.getCitationsLesPlusLikees(0, 5)
             }
-        }, 
+        },
         [
             h('h1', {}, 'HyperApp Template'),
             CitationsLesPlusLikees({
