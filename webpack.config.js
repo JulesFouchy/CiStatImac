@@ -29,7 +29,7 @@ module.exports = (env, argv) => {
       options: {
         sourceMap: devMode, // for dev debug
         ident: 'postcss',
-        plugins: (loader) => [ require('autoprefixer')()] // auto prefix css for web browsers compatibility
+        plugins: (loader) => [require('autoprefixer')()] // auto prefix css for web browsers compatibility
       }
     }
   ]

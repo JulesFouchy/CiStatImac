@@ -1,16 +1,13 @@
 {
   "name": "hyperapptemplate",
   "version": "1.0.0",
-  "description": "hyperApp template for IMACs students",
+  "description": "Stats for Citatimac !",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --color --mode development",
     "build": "webpack --mode production"
   },
-  "keywords": [
-    "IMAC"
-  ],
-  "author": "Enguerrand DE SMET",
+  "author": "Amandine KOHLMULLER, Barbara GUYONNEAU, Jules FOUCHY, Laurelenn SANGARE, Monica LISACEK",
   "license": "ISC",
   "dependencies": {
     "@hyperapp/logger": "^0.5.0",
