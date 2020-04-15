@@ -6,8 +6,6 @@ export default (props) =>
     Section({
         title: 'Citations les plus likées',
         children: props.citations.map( citation =>
-            Citation({
-                text: citation.text
-            })
+            Citation(citation)
         )
     })

@@ -1,6 +1,8 @@
 $titleColor: #db7500;
-$textColor: #28b1d3;
+$textColor: black;
 $black: #1b2642;
+$myViolet: violet;
+$myOrange: orange;
 body {
 	padding: 0; 
 	margin: 0;
@@ -46,9 +48,22 @@ button {
 	}
 }
 
+/* Section */
 .section {
 	background-color: white;
 }
 .sectionTitle {
 	color: red;
+}
+.square {
+	background-color: $myViolet;
+}
+
+/* ----------- CITATIONS LES PLUS LIKEES ----------- */
+
+.citationText {
+	font-style: italic;
+}
+.citationAuthor {
+	color: gray;
 }
