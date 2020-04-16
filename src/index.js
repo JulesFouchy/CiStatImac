@@ -13,4 +13,3 @@ withLogger(app)( // start hyperapp
     view,
     document.body
 )
-console.log('hyperApp started')
