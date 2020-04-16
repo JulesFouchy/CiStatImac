@@ -23,11 +23,13 @@ body {
 	border-radius: 2px;
 	color: white;
 
-	align-items: center;
-	justify-content: center;
-	display: flex;
 	margin-top: auto;
 	margin-bottom: auto;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .rankingNumber {
