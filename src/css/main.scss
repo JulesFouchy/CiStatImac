@@ -17,13 +17,9 @@ body {
 }
 
 button {
-	background: $black;
-	color: $textColor;
-	border-radius: 5px;
-	border: 1px solid $textColor;
-	font-size: 2em;
-	font-weight: 100;
+	border-radius: 2px;
 	outline: none;
+	box-shadow: none;
 	margin: 0;
 	padding: 5px 15px 10px;
 	transition: .2s;
@@ -37,9 +33,6 @@ button {
 	}
 	&:focus {
 		border: 1px solid $textColor;
-	}
-	button + button {
-		margin-left: 3px;
 	}
 }
 
@@ -158,6 +151,25 @@ $citationHeight: 50px;
 
 .pageNavigation {
 	margin-top: auto;
+	.box {
+		width: 14px;
+		height: 14px;
+		background-color: $myViolet;
+		border-radius: 2px;
+	}
+	font-size: 9px;
+	color: #6C6C6C;
+	input {
+		width: 25px;
+		height: 14px;
+		border: 1px solid #DDDDDD;
+		box-sizing: border-box;
+		border-radius: 2px;
+		font-size: 9px;
+		font-family: Roboto;
+		padding: 3px;
+		color: #6C6C6C;
+	}
 }
 
 .citationsList {
