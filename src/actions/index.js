@@ -8,7 +8,7 @@ export default {
                 actions.setCitations(response.data.sort((a, b) => {
                     return Number(b.likesCitation) - Number(a.likesCitation)
                 }))
-                actions.getCitationsLesPlusLikees({start: 0, count: 5})
+                actions.getCitationsLesPlusLikees()
             })
             .catch(error => { console.log(error) })
         // ---- TAGS ----
@@ -26,14 +26,16 @@ export default {
     setTags: (tags) => (state) => {
         return {...state, dbTags: tags}
     },
-    getCitationsLesPlusLikees: (props) => state => {
+    getCitationsLesPlusLikees: () => state => {
+        const count = state.topCitations_NbCitatsPerPage
+        const start = state.topCitations_CurrentPage * count
         return { 
             ...state, 
-            citationsLesPlusLikees: state.dbCitations.slice(props.start, props.start + props.count).map((citation, index) => ({
+            citationsLesPlusLikees: state.dbCitations.slice(start, start + count).map((citation, index) => ({
                 text: citation.contenuCitation,
                 author: citation.auteurCitation,
                 nbLikes: citation.likesCitation,
-                ranking: props.start + 1 + index
+                ranking: start + 1 + index
             }))
         }
     },
