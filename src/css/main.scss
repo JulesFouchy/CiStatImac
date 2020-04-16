@@ -55,11 +55,31 @@ button {
 	display: flex;
 }
 
+.rankingNumber {
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 20px;
+	line-height: 20px;
+
+	color: $myOrange;
+
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+.highlightedRankingNumber {
+	font-size: 35px;
+	color: $myViolet;
+}
+
 /* ----------- SECTION ----------- */
 
 .section {
 	background-color: white;
 	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+	padding: 25px;
 }
 .sectionTitle {
 	color: #464646;
@@ -67,6 +87,10 @@ button {
 	font-weight: bold;
 	font-size: 16px;
 	line-height: 20px;
+
+	margin: 0;
+
+	text-align: left;
 }
 
 /* ----------- CITATIONS LES PLUS LIKEES ----------- */
@@ -89,7 +113,7 @@ button {
 #citationsLesPlusLikees { 
 	width: 467px;
 	height: 647px;
-	
+
 	.box {
 		width: 62px;
 		height: 50px;
