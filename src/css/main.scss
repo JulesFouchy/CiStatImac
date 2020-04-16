@@ -53,6 +53,8 @@ button {
 	align-items: center;
 	justify-content: center;
 	display: flex;
+	margin-top: auto;
+	margin-bottom: auto;
 }
 
 .rankingNumber {
@@ -95,13 +97,27 @@ button {
 
 /* ----------- CITATIONS LES PLUS LIKEES ----------- */
 
+$citationHeight: 50px;
+
+#citationsLesPlusLikees { 
+	width: 467px;
+	height: 647px;
+
+	.box {
+		width: 62px;
+		height: $citationHeight;
+	}
+}
+
 .citationText {
 	font-style: italic;
 	font-weight: normal;
 	font-size: 10px;
 	line-height: 10px;
+	text-align: justify;
 
 	color: #757575;
+	flex-grow: 1;
 }
 .citationAuthor {
 	font-style: normal;
@@ -109,18 +125,26 @@ button {
 	font-size: 10px;
 	line-height: 10px;
 	color: #BEBEBE;
+	align-self: flex-start;
 }
-#citationsLesPlusLikees { 
-	width: 467px;
-	height: 647px;
 
-	.box {
-		width: 62px;
-		height: 50px;
-	}
-}
 .citationContainer {
-	display: flex;
+	margin-top: 20px;
+	width: 95%;
+	height: $citationHeight;
+
+	display: grid;
+	grid-template-columns: 10% 17% 73%;
+	
+	.rankingNumber {
+		grid-column-start: 1;
+	}
+	.box {
+		grid-column-start: 2;
+	}
+	.citationTextAndAuthor {
+		grid-column-start: 3;
+	}
 }
 
 .citationTextAndAuthor {
