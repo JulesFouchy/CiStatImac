@@ -5,13 +5,13 @@ export default {
         // ---- CITATIONS ----
         axios.get('https://citatapi.herokuapp.com/allCitations')
             .then(response => {
-                actions.setCitations(response)
+                actions.setCitations(response.data)
             })
             .catch(error => { console.log(error) })
         // ---- TAGS ----
         axios.get('https://citatapi.herokuapp.com/allTags')
             .then(response => {
-                actions.setTags(response)
+                actions.setTags(response.data)
             })
             .catch(error => { console.log(error) })
         //
