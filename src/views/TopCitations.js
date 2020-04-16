@@ -12,6 +12,8 @@ export default (state, actions) =>
                 state.topCitations.map( citation => Citation(citation) )
             ),
             PageNavigation({
+                currPage: state.topCitations_CurrentPage+1,
+                maxNbPages: Math.ceil(state.dbCitations.length / state.topCitations_NbCitatsPerPage),
                 onBackward: () => { actions.topCitationsNavPage(-1) ; actions.getTopCitations() },
                 onForward:  () => { actions.topCitationsNavPage(+1) ; actions.getTopCitations() }
             })
