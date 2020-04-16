@@ -39,8 +39,13 @@ export default {
             }))
         }
     },
-    topCitationsNavPage: (delta) => state => ({
+    topCitationsNavToPage: (newPage) => state => ({
         ...state,
-        topCitations_CurrentPage: state.topCitations_CurrentPage + delta
+        topCitations_CurrentPage: newPage,
+        topCitations_NavContent: newPage+1
+    }),
+    setNavContentToEmpty: () => state => ({
+        ...state,
+        topCitations_NavContent: ''
     })
 }
