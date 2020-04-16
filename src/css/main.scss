@@ -3,22 +3,17 @@ $textColor: black;
 $black: #1b2642;
 $myViolet: #874EDD;
 $myOrange: #FDC132;
+
 body {
+	font-family: Roboto;
 	padding: 0; 
 	margin: 0;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	background-color: $black;
+	background: #E5E5E5;
 	display: flex;
 	color: $textColor;
-}
-
-h1 {
-	font-family: 'Playfair Display', sans-serif;
-	font-size: 2em;
-	color: $titleColor;
-	transform: translateX(10px);
 }
 
 button {
@@ -48,15 +43,26 @@ button {
 	}
 }
 
-/* Section */
+/* ----------- COMPONENTS ----------- */
+
+.box {
+	background-color: $myViolet;
+	border-radius: 2px;
+	color: white;
+}
+
+/* ----------- SECTION ----------- */
+
 .section {
 	background-color: white;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 }
 .sectionTitle {
-	color: red;
-}
-.square {
-	background-color: $myViolet;
+	color: #464646;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
 }
 
 /* ----------- CITATIONS LES PLUS LIKEES ----------- */
