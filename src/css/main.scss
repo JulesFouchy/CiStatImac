@@ -103,6 +103,9 @@ $citationHeight: 50px;
 	width: 467px;
 	height: 647px;
 
+	display: flex;
+	flex-direction: column;
+
 	.box {
 		width: 62px;
 		height: $citationHeight;
@@ -151,4 +154,8 @@ $citationHeight: 50px;
 	display: flex;
 	align-items: flex-start;
 	flex-direction: column;
+}
+
+.pageNavigation {
+	margin-top: auto;
 }

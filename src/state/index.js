@@ -3,7 +3,7 @@ export default {
     dbTags: [],
     topCitations: [],
     topCitations_CurrentPage: 0,
-    topCitations_NbCitatsPerPage: 5,
+    topCitations_NbCitatsPerPage: 7,
     count: 0,
     ip: '',
     espacesVertsData: {
