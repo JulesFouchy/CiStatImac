@@ -87,8 +87,20 @@ button {
 	color: #BEBEBE;
 }
 #citationsLesPlusLikees { 
+	width: 467px;
+	height: 647px;
+	
 	.box {
 		width: 62px;
 		height: 50px;
 	}
+}
+.citationContainer {
+	display: flex;
+}
+
+.citationTextAndAuthor {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
 }

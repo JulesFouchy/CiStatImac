@@ -11,7 +11,7 @@ export default {
                 nbLikes: 0
             },
             {
-                text: 'C\'est nickel, c\'est gros, c\'est bien.',
+                text: 'Purée hier y\'a 2 grands mecs qui sont venus dans ma chambre, ils ont sortis leur outil, et ils m\'ont rebouché mon trou. C\'était rapide mais qu\'est-ce qu\'ils ont bien bossé.Purée hier y\'a 2 grands mecs qui sont venus dans ma chambre, ils ont sortis leur outil, et ils m\'ont rebouché mon trou. C\'était rapide mais qu\'est-ce qu\'ils ont bien bossé.Purée hier y\'a 2 grands mecs qui sont venus dans ma chambre, ils ont sortis leur outil, et ils m\'ont rebouché mon trou. C\'était rapide mais qu\'est-ce qu\'ils ont bien bossé.',
                 author: 'Jules Fouchyer',
                 nbLikes: 111
             }

@@ -5,6 +5,8 @@ import Box from './Box'
 export default (props) =>
     h('div', {class: 'citationContainer'}, [
         Box({ content: props.nbLikes + ' Likes' }),
-        h('p', {class: 'citationText'}, props.text),
-        h('span', {class: 'citationAuthor'}, 'par ' + props.author)
+        h('span', {class: 'citationTextAndAuthor'}, [
+            h('p', {class: 'citationText'}, '"' + props.text + '"'),
+            h('span', {class: 'citationAuthor'}, 'par ' + props.author)
+        ])
     ])
