@@ -8,6 +8,7 @@ export default {
                 actions.setCitations(response.data.sort((a, b) => {
                     return Number(b.likesCitation) - Number(a.likesCitation)
                 }))
+                actions.getCitationsLesPlusLikees({start: 0, count: 5})
             })
             .catch(error => { console.log(error) })
         // ---- TAGS ----
@@ -25,23 +26,16 @@ export default {
     setTags: (tags) => (state) => {
         return {...state, dbTags: tags}
     },
-    getCitationsLesPlusLikees: (indexStart, count) => state => {
-        const min = indexStart
-        const max = indexStart + count
-        return { ...state, citationsLesPlusLikees: [
-            {
-                text: 'Je vais goûter pour oublier.',
-                author: 'Emilie confinée',
-                nbLikes: 0,
-                ranking: 1
-            },
-            {
-                text: 'Purée hier y\'a 2 grands mecs qui sont venus dans ma chambre, ils ont sortis leur outil, et ils m\'ont rebouché mon trou. C\'était rapide mais qu\'est-ce qu\'ils ont bien bossé.Purée hier y\'a 2 grands mecs qui sont venus dans ma chambre, ils ont sortis leur outil, et ils m\'ont rebouché mon trou. C\'était rapide mais qu\'est-ce qu\'ils ont bien bossé.Purée hier y\'a 2 grands mecs qui sont venus dans ma chambre, ils ont sortis leur outil, et ils m\'ont rebouché mon trou. C\'était rapide mais qu\'est-ce qu\'ils ont bien bossé.',
-                author: 'Jules Fouchyer',
-                nbLikes: 111,
-                ranking: 2
-            }
-        ]}
+    getCitationsLesPlusLikees: (props) => state => {
+        return { 
+            ...state, 
+            citationsLesPlusLikees: state.dbCitations.slice(props.start, props.start + props.count).map((citation, index) => ({
+                text: citation.contenuCitation,
+                author: citation.auteurCitation,
+                nbLikes: citation.likesCitation,
+                ranking: props.start + 1 + index
+            }))
+        }
     },
     increment: () => state => {
         console.log(state)

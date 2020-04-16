@@ -9,7 +9,6 @@ export default (state, actions) =>
         {
             oncreate: () => {
                 actions.loadDatabase()
-                actions.getCitationsLesPlusLikees(0, 5)
             }
         },
         [
