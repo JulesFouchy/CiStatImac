@@ -10,6 +10,6 @@ export default (props) => {
             h('input', {value: props.navContent, placeholder: props.currPage + 1, oninput: props.onInputText}),
             h('span', {}, ' sur ' + props.maxNbPages),
             h('button', { disabled: !leftEnabled,  onclick: () => props.onBackward() }, '<'),
-            h('button', { disabled: !rightEnabled, onclick: () => props.onForward() }, '>')
+            h('button', { disabled: !rightEnabled, onclick: () => props.onForward()  }, '>')
         ]))
     }

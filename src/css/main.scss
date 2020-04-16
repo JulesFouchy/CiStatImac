@@ -16,26 +16,6 @@ body {
 	color: $textColor;
 }
 
-button {
-	border-radius: 2px;
-	outline: none;
-	box-shadow: none;
-	margin: 0;
-	padding: 5px 15px 10px;
-	transition: .2s;
-  
-	&:hover, &:active, &:disabled {
-		background: $textColor;
-		color: $black;
-	}
-	&:active {
-		outline: 2px solid $textColor;
-	}
-	&:focus {
-		border: 1px solid $textColor;
-	}
-}
-
 /* ----------- COMPONENTS ----------- */
 
 .box {
@@ -151,12 +131,6 @@ $citationHeight: 50px;
 
 .pageNavigation {
 	margin-top: auto;
-	.box {
-		width: 14px;
-		height: 14px;
-		background-color: $myViolet;
-		border-radius: 2px;
-	}
 	font-size: 9px;
 	color: #6C6C6C;
 	input {
@@ -169,6 +143,33 @@ $citationHeight: 50px;
 		font-family: Roboto;
 		padding: 3px;
 		color: #6C6C6C;
+	}
+	button {
+		background-color: $myViolet;
+		color: white;
+		border-radius: 2px;
+
+		width: 14px;
+		height: 14px;
+		margin: auto;
+		/*margin: 1px;
+		margin-bottom: 0;
+		margin-top: 0;*/
+
+		border: none;
+		outline: none;
+		transition: .2s;
+	  
+		&:active {
+			background: $myOrange;
+		}
+		&:hover {
+			background: $myOrange;
+		}
+		&:disabled {
+			/*visibility: hidden;*/
+			background: white;
+		}
 	}
 }
 
