@@ -4,6 +4,7 @@ import Citation from './Citation'
 
 export default (props) =>
     Section({
+        id: 'citationsLesPlusLikees',
         title: 'Citations les plus likées',
         children: props.citations.map( citation =>
             Citation(citation)

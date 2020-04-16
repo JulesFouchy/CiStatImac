@@ -49,6 +49,10 @@ button {
 	background-color: $myViolet;
 	border-radius: 2px;
 	color: white;
+
+	align-items: center;
+	justify-content: center;
+	display: flex;
 }
 
 /* ----------- SECTION ----------- */
@@ -69,7 +73,22 @@ button {
 
 .citationText {
 	font-style: italic;
+	font-weight: normal;
+	font-size: 10px;
+	line-height: 10px;
+
+	color: #757575;
 }
 .citationAuthor {
-	color: gray;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 10px;
+	line-height: 10px;
+	color: #BEBEBE;
+}
+#citationsLesPlusLikees { 
+	.box {
+		width: 62px;
+		height: 50px;
+	}
 }
