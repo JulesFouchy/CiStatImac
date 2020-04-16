@@ -12,8 +12,8 @@ export default (props) => {
                 h('span', {}, ' sur ' + props.maxNbPages)
             ]),
             h('div', {class: 'pageNavButtons'}, [
-                h('button', { disabled: !leftEnabled,  onclick: () => props.onBackward() }, '<'),
-                h('button', { disabled: !rightEnabled, onclick: () => props.onForward()  }, '>')
+                h('button', { disabled: !leftEnabled,  onclick: () => props.onBackward() }, h('i', {class: "fas fa-angle-left"})),
+                h('button', { disabled: !rightEnabled, onclick: () => props.onForward()  }, h('i', {class: "fas fa-angle-right"}))
             ])
         ]))
     }
