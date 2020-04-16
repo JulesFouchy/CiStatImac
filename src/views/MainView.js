@@ -1,6 +1,6 @@
 import { h } from 'hyperapp'
 
-import CitationsLesPlusLikees from '../components/_CitationsLesPlusLikees'
+import CitationsLesPlusLikees from './CitationsLesPlusLikees'
 import Button from '../components/Button'
 import BarChart from '../components/BarChart'
 
@@ -13,10 +13,7 @@ export default (state, actions) =>
         },
         [
             h('h1', {}, 'HyperApp Template'),
-            CitationsLesPlusLikees({
-                citations: state.citationsLesPlusLikees,
-                actions: actions
-            }),
+            CitationsLesPlusLikees(state, actions),
             h(
                 'p',
                 { oncreate: () => actions.getIpFromApi() },
