@@ -8,6 +8,7 @@ export default (state, actions) =>
     h('div',
         {
             oncreate: () => {
+                actions.loadDatabase()
                 actions.getCitationsLesPlusLikees(0, 5)
             }
         },

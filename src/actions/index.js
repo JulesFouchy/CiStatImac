@@ -1,6 +1,28 @@
 import axios from 'axios'
 
 export default {
+    loadDatabase: () => (state, actions) => {
+        // ---- CITATIONS ----
+        axios.get('https://citatapi.herokuapp.com/allCitations')
+            .then(response => {
+                actions.setCitations(response)
+            })
+            .catch(error => { console.log(error) })
+        // ---- TAGS ----
+        axios.get('https://citatapi.herokuapp.com/allTags')
+            .then(response => {
+                actions.setTags(response)
+            })
+            .catch(error => { console.log(error) })
+        //
+        return state
+    },
+    setCitations: (citations) => (state) => {
+        return {...state, dbCitations: citations}
+    },
+    setTags: (tags) => (state) => {
+        return {...state, dbTags: tags}
+    },
     getCitationsLesPlusLikees: (indexStart, count) => state => {
         const min = indexStart
         const max = indexStart + count
