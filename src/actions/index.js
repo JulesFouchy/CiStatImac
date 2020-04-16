@@ -5,7 +5,9 @@ export default {
         // ---- CITATIONS ----
         axios.get('https://citatapi.herokuapp.com/allCitations')
             .then(response => {
-                actions.setCitations(response.data)
+                actions.setCitations(response.data.sort((a, b) => {
+                    return Number(b.likesCitation) - Number(a.likesCitation)
+                }))
             })
             .catch(error => { console.log(error) })
         // ---- TAGS ----
