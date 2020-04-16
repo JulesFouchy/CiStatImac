@@ -39,6 +39,10 @@ export default {
             }))
         }
     },
+    topCitationsNavPage: (delta) => state => ({
+        ...state,
+        topCitations_CurrentPage: state.topCitations_CurrentPage + delta
+    }),
     increment: () => state => {
         console.log(state)
         return { ...state, count: state.count + 1 } // on retourne le nouveau state avec notre compteur mis à jour

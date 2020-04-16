@@ -14,7 +14,8 @@ export default (state, actions) =>
         [
             h('h1', {}, 'HyperApp Template'),
             CitationsLesPlusLikees({
-                citations: state.citationsLesPlusLikees
+                citations: state.citationsLesPlusLikees,
+                actions: actions
             }),
             h(
                 'p',
