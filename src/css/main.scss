@@ -72,25 +72,28 @@ body {
 
 /* ----------- TOP DES CITATIONS ----------- */
 
-$citationHeight: 50px;
-
 #topCitations { 
 	width: 467px;
-	height: 647px;
+	height: 90%;
+	margin: auto;
 
 	display: flex;
 	flex-direction: column;
 
 	.box {
-		width: 62px;
-		height: $citationHeight;
+		width: 65px;
+		height: 65px;
+		font-size: 15px;
+		.nbLikes {
+			font-size: 16px;
+		}
 	}
 }
 
 .citationText {
 	font-style: italic;
 	font-weight: normal;
-	font-size: 10px;
+	font-size: 11.3px;
 	line-height: 10px;
 	text-align: justify;
 

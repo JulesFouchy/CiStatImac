@@ -4,7 +4,7 @@ export default {
     topCitations: [],
     topCitations_CurrentPage: 0,
     topCitations_NavContent: 1,
-    topCitations_NbCitatsPerPage: 7,
+    topCitations_NbCitatsPerPage: 5,
     count: 0,
     ip: '',
     espacesVertsData: {

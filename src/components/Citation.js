@@ -7,7 +7,7 @@ export default (props) =>
     h('div', {class: 'citationContainer'}, [
         Ranking({number: props.ranking}),
         Box({ content: [
-            h('div', {}, props.nbLikes),
+            h('div', {class: 'nbLikes'}, props.nbLikes),
             h('div', {}, 'Likes')
         ]}),
         h('span', {class: 'citationTextAndAuthor'}, [
