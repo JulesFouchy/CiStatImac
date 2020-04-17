@@ -92,6 +92,10 @@ $citationHeight: 65px;
 	}
 }
 
+::-webkit-scrollbar {
+	width: 0px; /* remove scrollbar space */
+}
+
 .citationText {
 	font-style: italic;
 	font-weight: normal;
