@@ -1,9 +1,8 @@
-$titleColor: #db7500;
-$textColor: black;
-$black: #1b2642;
+$myOrange: #FDC132;
 $myViolet: #874EDD;
 $myVioletDarker: #723fbf;
-$myOrange: #FDC132;
+
+$defaultTextSize: 12px;
 
 body {
 	font-family: Roboto;
@@ -13,7 +12,6 @@ body {
 	justify-content: center;
 	background: #E5E5E5;
 	display: flex;
-	color: $textColor;
 }
 
 /* --------------------------------- */
@@ -100,7 +98,7 @@ transition: .2s;
 /* ----------- TOP DES CITATIONS ----------- */
 /* ----------------------------------------- */
 
-$citationHeight: 65px;
+$citationHeight: 68px;
 
 #topCitations { 
 	width: 467px;
@@ -123,8 +121,8 @@ $citationHeight: 65px;
 .citationText {
 	font-style: italic;
 	font-weight: normal;
-	font-size: 11.3px;
-	line-height: 10px;
+	font-size: $defaultTextSize;
+	line-height: 13px;
 	overflow: auto;
 	height: auto;
 
@@ -134,7 +132,7 @@ $citationHeight: 65px;
 .citationAuthor {
 	font-style: normal;
 	font-weight: normal;
-	font-size: 10px;
+	font-size: 11px;
 	line-height: 10px;
 	color: #BEBEBE;
 	align-self: flex-start;
