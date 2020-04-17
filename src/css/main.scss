@@ -15,7 +15,31 @@ body {
 	color: $textColor;
 }
 
-/* ----------- COMPONENTS ----------- */
+/* --------------------------------- */
+/* ------------ SCROLLBAR ---------- */
+/* --------------------------------- */
+
+::-webkit-scrollbar {
+	width: 8px;
+  }
+  
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+background: $myViolet;
+border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: $myOrange;
+transition: .2s;
+}
+
+/* --------------------------------- */
+/* ---------- COMPONENTS ----------- */
+/* --------------------------------- */
 
 .box {
 	background-color: $myViolet;
@@ -50,7 +74,9 @@ body {
 	color: $myViolet;
 }
 
-/* ----------- SECTION ----------- */
+/* --------------------------------- */
+/* ------------- SECTION ----------- */
+/* --------------------------------- */
 
 .section {
 	background-color: white;
@@ -69,7 +95,9 @@ body {
 	text-align: left;
 }
 
+/* ----------------------------------------- */
 /* ----------- TOP DES CITATIONS ----------- */
+/* ----------------------------------------- */
 
 $citationHeight: 65px;
 
@@ -89,10 +117,6 @@ $citationHeight: 65px;
 			font-size: 16px;
 		}
 	}
-}
-
-::-webkit-scrollbar {
-	width: 0px; /* remove scrollbar space */
 }
 
 .citationText {
