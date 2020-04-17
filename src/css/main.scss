@@ -10,7 +10,6 @@ body {
 	margin: 0;
 	align-items: center;
 	justify-content: center;
-	text-align: center;
 	background: #E5E5E5;
 	display: flex;
 	color: $textColor;
@@ -101,7 +100,6 @@ $citationHeight: 65px;
 	font-weight: normal;
 	font-size: 11.3px;
 	line-height: 10px;
-	text-align: justify;
 	overflow: auto;
 	height: auto;
 
