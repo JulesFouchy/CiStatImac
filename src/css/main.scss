@@ -20,20 +20,20 @@ body {
 
 ::-webkit-scrollbar {
 	width: 8px;
-  }
+}
   
 ::-webkit-scrollbar-track {
-background: #f1f1f1;
+	background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-background: $myViolet;
-border-radius: 5px;
+	background: $myViolet;
+	border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-background: $myOrange;
-transition: .2s;
+	background: $myOrange;
+	transition: .2s;
 }
 
 /* --------------------------------- */
