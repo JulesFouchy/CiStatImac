@@ -111,16 +111,17 @@ $citationHeight: 68px;
 	.box {
 		width: $citationHeight;
 		height: $citationHeight;
-		font-size: 15px;
+		font-size: 13px;
 		.nbLikes {
 			font-size: 16px;
+			font-weight: bold;
 		}
 	}
 }
 
 .citationText {
 	font-style: italic;
-	font-weight: normal;
+	font-weight: bold;
 	font-size: $defaultTextSize;
 	line-height: 13px;
 	overflow: auto;
@@ -133,10 +134,11 @@ $citationHeight: 68px;
 .citationAuthor {
 	font-style: normal;
 	font-weight: normal;
-	font-size: 11px;
-	line-height: 10px;
+	font-size: 12px;
+	line-height: 5px;
 	color: #BEBEBE;
 	align-self: flex-start;
+	margin-bottom: 5px;
 }
 
 .citationContainer {
