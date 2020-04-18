@@ -29,8 +29,8 @@ export default {
     getTopCitations: () => state => {
         const count = state.topCitations_NbCitatsPerPage
         const start = state.topCitations_CurrentPage * count
-        return { 
-            ...state, 
+        return {
+            ...state,
             topCitations: state.dbCitations.slice(start, start + count).map((citation, index) => ({
                 text: citation.contenuCitation,
                 author: citation.auteurCitation,
@@ -42,7 +42,7 @@ export default {
     topCitationsNavToPage: (newPage) => state => ({
         ...state,
         topCitations_CurrentPage: newPage,
-        topCitations_NavContent: newPage+1
+        topCitations_NavContent: newPage + 1
     }),
     setNavContentToEmpty: () => state => ({
         ...state,

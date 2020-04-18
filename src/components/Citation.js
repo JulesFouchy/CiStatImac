@@ -4,7 +4,7 @@ import Ranking from './RankingNumber'
 
 const customScrolling = event => {
     event.preventDefault()
-    event.target.scrollBy({ 
+    event.target.scrollBy({
         top: event.deltaY * 0.2,
         left: 0
     })
