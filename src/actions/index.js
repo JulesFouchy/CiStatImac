@@ -9,7 +9,8 @@ export default {
                 actions.setCitations(response.data.sort((a, b) => {
                     return Number(b.likesCitation) - Number(a.likesCitation)
                 }))
-                actions.computeState()
+                actions.computeTopCitations()
+                actions.computeTopConneries()
             })
             .catch(error => { console.log(error) })
         // ---- TAGS ----
@@ -22,15 +23,11 @@ export default {
         axios.get('https://citatapi.herokuapp.com/typesAuteur')
             .then(response => {
                 actions.setTypesAuteur(response.data)
-                actions.computeState()
+                actions.computeTopConneries()
             })
             .catch(error => { console.log(error) })
         //
         return state
-    },
-    computeState: () => (state, actions) => {
-        actions.getTopCitations()
-        actions.computeTopConneries()
     },
     setCitations: (citations) => (state) => {
         return {...state, dbCitations: citations}
@@ -41,7 +38,10 @@ export default {
     setTypesAuteur: (typesAuteur) => (state) => {
         return {...state, dbTypesAuteur: typesAuteur}
     },
-    getTopCitations: () => state => {
+    /**************************************
+           TOP DES CITATIONS
+    **************************************/
+    computeTopCitations: () => state => {
         const count = state.topCitations_NbCitatsPerPage
         const start = state.topCitations_CurrentPage * count
         return {

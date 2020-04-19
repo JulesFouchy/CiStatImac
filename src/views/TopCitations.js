@@ -17,8 +17,8 @@ export default (state, actions) => {
                     navContent: state.topCitations_NavContent,
                     currPage: state.topCitations_CurrentPage,
                     maxNbPages: maxNbPages,
-                    onBackward:  () => { actions.topCitationsNavToPage(state.topCitations_CurrentPage - 1) ; actions.getTopCitations() },
-                    onForward:   () => { actions.topCitationsNavToPage(state.topCitations_CurrentPage + 1) ; actions.getTopCitations() },
+                    onBackward:  () => { actions.topCitationsNavToPage(state.topCitations_CurrentPage - 1) ; actions.computeTopCitations() },
+                    onForward:   () => { actions.topCitationsNavToPage(state.topCitations_CurrentPage + 1) ; actions.computeTopCitations() },
                     onInputText: (event) => {
                         if (event.target.value === '')
                             actions.setNavContentToEmpty()
@@ -28,7 +28,7 @@ export default (state, actions) => {
                             console.log(Number.isInteger(p))
                             if (Number.isInteger(p)) {
                                 actions.topCitationsNavToPage( Math.min(Math.max(p, 1), maxNbPages) - 1 )
-                                actions.getTopCitations()
+                                actions.computeTopCitations()
                             } else {
                                 if (state.topCitations_NavContent === ' ')
                                     console.log('stfu')
