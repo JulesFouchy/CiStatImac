@@ -13,7 +13,7 @@ export default (state, actions) =>
         // ------------- SECTIONS --------------
         [
             TopCitations(state, actions),
-            TopTags(state, actions)
-            TopConneries(state, actions),
+            TopTags(state, actions),
+            TopConneries(state, actions)
         ]
     )

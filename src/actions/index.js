@@ -1,4 +1,5 @@
 import axios from 'axios'
+import getAuthorTypeFromID from '../helper/getAuthorTypeFromID'
 
 export default {
     loadDatabase: () => (state, actions) => {
@@ -8,7 +9,7 @@ export default {
                 actions.setCitations(response.data.sort((a, b) => {
                     return Number(b.likesCitation) - Number(a.likesCitation)
                 }))
-                actions.getTopCitations()
+                actions.computeState()
             })
             .catch(error => { console.log(error) })
         // ---- TAGS ----
@@ -21,11 +22,15 @@ export default {
         axios.get('https://citatapi.herokuapp.com/typesAuteur')
             .then(response => {
                 actions.setTypesAuteur(response.data)
-                actions.computeTopConneries();
+                actions.computeState()
             })
             .catch(error => { console.log(error) })
         //
         return state
+    },
+    computeState: () => (state, actions) => {
+        actions.getTopCitations()
+        actions.computeTopConneries()
     },
     setCitations: (citations) => (state) => {
         return {...state, dbCitations: citations}
@@ -63,23 +68,16 @@ export default {
     // authorType: nbCitationsAuthorType: dbTypesAuteur
     computeTopConneries: () => state => {
         const citationsCount = state.dbCitations.reduce((acc, citation) => {
-            acc[citation.idTypeAuteur] = (acc[citation.idTypeAuteur] || 0) + 1;
+            const authorType = getAuthorTypeFromID(state, citation.idTypeAuteur)
+            acc[authorType] = (acc[authorType] || 0) + 1;
             return acc;
         }, {})
+        console.log('citationsCount')
         console.log(citationsCount)
-        return state;
-/*
-        const count = state.topCitations_NbCitatsPerPage
-        const start = state.topCitations_CurrentPage * count
-        return {
-            ...state,
-            topCitations: state.dbCitations.slice(start, start + count).map((citation, index) => ({
-                text: citation.contenuCitation,
-                author: citation.auteurCitation,
-                nbLikes: citation.likesCitation,
-                ranking: start + 1 + index
-            }))
-        }
-        */
+        return state
+        // return {
+        //     ...state,
+        //     topConneries: citationsCount.map()
+        // }
     },
 }
