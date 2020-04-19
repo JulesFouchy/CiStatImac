@@ -6,17 +6,14 @@ export default (props) =>
         h('canvas', {
             oncreate: (element) => {
                 const ctx = element.getContext('2d')
-                const c = new Chart(ctx, {
+                const chart = new Chart(ctx, {
                     type: 'doughnut',
+                    responsive: true,
                     data: {
-                        labels: props.labels,
-                        datasets: [{
-                            data: props.data,
-                            backgroundColor: props.colors 
-                        }]
-                    },
-                    responsive: true
+                        datasets: [{}]
+                    }
                 })
+                props.acquireData(chart)
             }
         })
     ])
