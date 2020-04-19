@@ -7,6 +7,7 @@ import OverTime from './OverTime'
 export default (state, actions) =>
     h('div',
         {
+            id: 'mainView',
             oncreate: () => {
                 actions.loadDatabase()
             }
