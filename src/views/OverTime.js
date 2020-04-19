@@ -64,10 +64,6 @@ export default (state, actions) => {
                                 },
                                
                             ],                   
-                        height: 1000,
-                        width: 800,
-                        barThickness: 'flex',
-
                     }),   
                 ),
             ]
