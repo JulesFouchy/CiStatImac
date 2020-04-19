@@ -245,7 +245,7 @@ $citationHeight: 68px;
 
 }
 
-	button .selected{
+	.selectedButton{
 
 	background: #FDDA3E;
 	mix-blend-mode: normal;
@@ -253,6 +253,7 @@ $citationHeight: 68px;
 	box-sizing: border-box;
 	border-radius: 4px;
 	text-align: center;
+	font-style : bold;
 	color : white;
 	margin : 3px;
 	width: 85px;
@@ -260,7 +261,7 @@ $citationHeight: 68px;
 
 	}
 
-	select {
+	select{
 	
 	/* Base/White */
 
@@ -271,8 +272,22 @@ $citationHeight: 68px;
 	text-align : center;
 	color: #B7B7B7;
 	margin : 3px;
-	width: 60px;
+	width: 65px;
 	height: 25px;
 	}
 
+	.selectedDate{
+	
+	/* Selected*/
+
+	background: #FFFFFF;
+	border: 2px solid #FDD31C;
+	box-sizing: border-box;
+	border-radius: 4px;	
+	color: #FDD31C;
+	font-style : bold;
+	margin : 3px;
+	width: 65px;
+	height: 25px;
+	}
 }

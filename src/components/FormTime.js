@@ -3,10 +3,11 @@ import Button from './Button'
 
 export default (props) =>
     h('form', { class: 'formTime' }, [
-        Button({class: 'buttonTime', text: 'Les années', selected : true, onClick: props.updateYear}),
-        Button({class: 'buttonTime',  text: 'Les mois', onClick: props.updateMonth }),
+        Button({class: 'selectedButton', text: 'Les années', selected : true, onClick: props.updateYear}),
+        Button({text: 'Les mois', onClick: props.updateMonth }),
         h('select',{
-            id : 'monthSelector'}, 
+            id: 'monthSelector',
+        }, //class: 'selectedDate' avant }
             [
                 h('option', {
                     value: '2018',
