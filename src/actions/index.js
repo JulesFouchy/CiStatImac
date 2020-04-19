@@ -17,6 +17,13 @@ export default {
                 actions.setTags(response.data)
             })
             .catch(error => { console.log(error) })
+        // ---- AUTHOR TYPE ----
+        axios.get('https://citatapi.herokuapp.com/typesAuteur')
+            .then(response => {
+                actions.setTypesAuteur(response.data)
+                actions.computeTopConneries();
+            })
+            .catch(error => { console.log(error) })
         //
         return state
     },
@@ -25,6 +32,9 @@ export default {
     },
     setTags: (tags) => (state) => {
         return {...state, dbTags: tags}
+    },
+    setTypesAuteur: (typesAuteur) => (state) => {
+        return {...state, dbTypesAuteur: typesAuteur}
     },
     getTopCitations: () => state => {
         const count = state.topCitations_NbCitatsPerPage
@@ -47,5 +57,29 @@ export default {
     setNavContentToEmpty: () => state => ({
         ...state,
         topCitations_NavContent: ''
-    })
+    }),
+
+    /********* TOP CONNERIES *************/
+    // authorType: nbCitationsAuthorType: dbTypesAuteur
+    computeTopConneries: () => state => {
+        const citationsCount = state.dbCitations.reduce((acc, citation) => {
+            acc[citation.idTypeAuteur] = (acc[citation.idTypeAuteur] || 0) + 1;
+            return acc;
+        }, {})
+        console.log(citationsCount)
+        return state;
+/*
+        const count = state.topCitations_NbCitatsPerPage
+        const start = state.topCitations_CurrentPage * count
+        return {
+            ...state,
+            topCitations: state.dbCitations.slice(start, start + count).map((citation, index) => ({
+                text: citation.contenuCitation,
+                author: citation.auteurCitation,
+                nbLikes: citation.likesCitation,
+                ranking: start + 1 + index
+            }))
+        }
+        */
+    },
 }
