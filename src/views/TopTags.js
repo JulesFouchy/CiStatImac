@@ -9,9 +9,9 @@ export default (state, actions) => {
             title: 'Podium des Tags',
             children: [
                 PieChart({
-                    data: [50, 60, 20],
-                    labels: ['Race', 'Titre', 'Schlag'],
-                    colors: ['Green', 'Blue', 'Red']
+                    data: [50, 60, 20,50, 60, 20,50, 60, 20,50, 60, 20],
+                    labels: state.dbTags.map( el => el.name),
+                    colors: state.dbTags.map( el => el.color)
                 })
             ]
         })
