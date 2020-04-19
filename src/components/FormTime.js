@@ -2,7 +2,7 @@ import { h } from 'hyperapp'
 import Button from './Button'
 
 export default (props) =>
-    h('form', { class: 'formTime' }, [
+    h('div', { class: 'formTime' }, [
         Button({class: 'selectedButton', text: 'Les années', selected : true, onClick: props.updateYear}),
         Button({text: 'Les mois', onClick: props.updateMonth }),
         h('select',{
