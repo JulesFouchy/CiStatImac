@@ -13,7 +13,9 @@
     "@hyperapp/logger": "^0.5.0",
     "axios": "^0.19.2",
     "chart.js": "^2.9.3",
-    "hyperapp": "^1.2.10"
+    "core-js": "^3.6.5",
+    "hyperapp": "^1.2.10",
+    "regenerator-runtime": "^0.13.5"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

@@ -1,3 +1,7 @@
+// permet d'utiliser async / await
+import 'core-js/stable'
+import 'regenerator-runtime/runtime'
+
 import { app } from 'hyperapp'
 import { withLogger } from '@hyperapp/logger'
 
