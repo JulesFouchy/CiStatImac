@@ -70,14 +70,24 @@ export default {
         const citationsCount = state.dbCitations.reduce((acc, citation) => {
             const authorType = getAuthorTypeFromID(state, citation.idTypeAuteur)
             acc[authorType] = (acc[authorType] || 0) + 1;
-            return acc;
+            return acc
         }, {})
-        console.log('citationsCount')
-        console.log(citationsCount)
-        return state
-        // return {
-        //     ...state,
-        //     topConneries: citationsCount.map()
-        // }
+        const tab = Object.entries(citationsCount).map( pair => {
+            const authorType = pair[0]; const count = pair[1]
+            return {
+                authorType: authorType,
+                nbCitationsAuthorType: count
+            }
+        })
+        const sortConneries = tab.sort((a, b) => {
+            return Number(b.nbCitationsAuthorType) - Number(a.nbCitationsAuthorType)
+        })
+        
+        return {
+             ...state,
+             topConneries: sortConneries
+        //console.log('citationsCount')
+        //console.log(citationsCount)
+        }
     },
 }
