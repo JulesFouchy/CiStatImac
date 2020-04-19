@@ -222,6 +222,57 @@ $citationHeight: 68px;
 	}
 }
 
-.citationsList {
-	height: 510px;
+
+/* ----------------------------------------- */
+/* --------- CITATIONS PAR PERIODE --------- */
+/* ----------------------------------------- */
+
+.formTime{
+	
+
+	button {
+
+	background: rgba(201, 201, 201, 0.1);
+	border-radius: 4px;
+	text-align: center;
+	color : #9C9C9C;;
+	margin : 3px;
+	width: 85px;
+	height: 25px;	
+	margin : 3px;
+	width: 85px;
+	height: 25px;
+
+}
+
+	button .selected{
+
+	background: #FDDA3E;
+	mix-blend-mode: normal;
+	border: 1px solid #FDD31C;
+	box-sizing: border-box;
+	border-radius: 4px;
+	text-align: center;
+	color : white;
+	margin : 3px;
+	width: 85px;
+	height: 25px;
+
+	}
+
+	select {
+	
+	/* Base/White */
+
+	background: #FFFFFF;
+	border: 1px solid #DADADA;
+	box-sizing: border-box;
+	border-radius: 4px;	
+	text-align : center;
+	color: #B7B7B7;
+	margin : 3px;
+	width: 60px;
+	height: 25px;
+	}
+
 }

@@ -88,4 +88,24 @@ export default {
             topConneries: sortConneries
         }
     },
+
+    /**************************************
+          CITATIONS A TRAVERS LE TEMPS
+    **************************************/
+    computeCitationTime: () => state => {
+        const test = {
+            count: 0
+        };
+
+        const actions = {
+            updateYear: () => ({ count: (test.count += 1) }),
+            updateMonth: () => ({ count: (test.count -= 1) })
+        };
+
+        return {
+            ...state,
+            nbCitationsTime : test
+        }
+    },
+    
 }

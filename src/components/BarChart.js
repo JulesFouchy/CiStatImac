@@ -12,7 +12,7 @@ export default (props) =>
                     type: 'bar',
                     data: {
                         labels: props.labels,
-                        datasets: props.datasets
+                        datasets: props.datasets,
                     },
                     options: {
                         scales: {
@@ -20,13 +20,13 @@ export default (props) =>
                                 stacked: true
                             }],
                             yAxes: [{
-                                stacked: true
+                                stacked: true,
                             }]
                         }
                     },
                     responsive: true,
                 })
-                c.canvas.style.height = props.height + 'px'
+                c.canvas.style.height = props.height + 'px',
                 c.canvas.style.width = props.width + 'px'
                 // si une fonction de callback est passé en paramètres de mes props alors je l'exécute
                 if (props.callBack !== undefined) { props.callBack(c) }
