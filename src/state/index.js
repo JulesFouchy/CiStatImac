@@ -30,5 +30,4 @@ export default {
     }
     // -------- TOP CONNERIES --------
     // -------- TOP TAGS --------
-    topConneries: [{authorType: 'IMAC 2021', nbCitationsAuthorType: 80}, {authorType: 'IMAC 2022', nbCitationsAuthorType: 52}],
 }
