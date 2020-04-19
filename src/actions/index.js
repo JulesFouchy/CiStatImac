@@ -13,11 +13,11 @@ export default {
             })
             .catch(error => { console.log(error) })
         // ---- TAGS ----
-        axios.get('https://citatapi.herokuapp.com/allTags')
-            .then(response => {
-                actions.setTags(response.data)
-            })
-            .catch(error => { console.log(error) })
+        // axios.get('https://citatapi.herokuapp.com/allTags')
+        //     .then(response => {
+        //         actions.setTags(response.data)
+        //     })
+        //     .catch(error => { console.log(error) })
         // ---- AUTHOR TYPE ----
         axios.get('https://citatapi.herokuapp.com/typesAuteur')
             .then(response => {
