@@ -2,7 +2,7 @@ import { h } from 'hyperapp'
 import Section from '../components/Section'
 import Connerie from '../components/Connerie'
 
-export default (state, actions) => {
+export default (state) => {
     return (
         Section({
             id: 'topConneries',
