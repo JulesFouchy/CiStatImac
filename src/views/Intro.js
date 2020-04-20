@@ -9,8 +9,8 @@ export default (state) => {
             id: 'intro',
             title: 'CitatiStats',
             children: [
-                h('p', {class: 'introText'}, "Petite description lalala"),
-                Button({ text: 'Essai', onclick: console.log("hello")})
+                h('p', {class: 'introText'}, 'Petite description lalala'),
+                Button({ text: 'Essai', onclick: "location.href = 'www.google.com';"})
             ]
         })
     )
