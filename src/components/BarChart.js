@@ -11,8 +11,8 @@ export default (props) =>
                 const c = new Chart(ctx, {
                     type: 'bar',
                     data: {
-                        labels: props.labels,
-                        datasets: props.datasets,
+                        labels: [],
+                        datasets: [],
                     },
                     options: {
                         maintainAspectRatio: false,
