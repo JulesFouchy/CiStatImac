@@ -12,7 +12,7 @@ export default (state, actions) => {
             children: [
                 h('div', { class: 'formForChart' }, FormTime
                 ),
-                h('div', { class: 'myChart' }, 
+                h('div', { class: 'myBarChart' }, 
                     BarChart({
                         labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
                         datasets:
@@ -70,6 +70,7 @@ export default (state, actions) => {
                                     data: [11.4, 12.3, 8.9],
                                     backgroundColor: '#B90000',
                                     maxBarThickness: 10,
+                                    maxBarHeight : 200,
                                 },
                                
                             ],                   

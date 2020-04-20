@@ -12,7 +12,7 @@ $defaultTextSize: 12px;
 body {
 	font-family: Roboto;
 	padding: 0; 
-	margin: 0;
+	margin: 50px;
 	align-items: center;
 	justify-content: center;
 	background: #E5E5E5;
@@ -37,17 +37,37 @@ a:hover {
 
 }
 
+
+
 #sectionsLeft{
 	display : flex;
 	flex-direction: column;
- 	justify-content: space-around;
+ 	justify-content: space-between;
 
+}
+
+#sectionsLeft:nth-child(1)
+{
+    flex: 1;
+}
+#sectionsLeft:nth-child(2)
+{
+    flex: 3;
 }
 
 #sectionsRight{
 	display : flex;
 	flex-direction: column;
- 	justify-content: space-around;
+ 	justify-content: space-between;
+}
+
+#sectionsRight:nth-child(1)
+{
+    flex: 1;
+}
+#sectionsRight:nth-child(2)
+{
+    flex: 1;
 }
 
 #sectionsBottomRight{
@@ -143,8 +163,7 @@ $citationHeight: 68px;
 
 #topCitations { 
 	width: 467px;
-	height: 640px;
-	margin: auto;
+	height: 700px;
 
 	display: flex;
 	flex-direction: column;
@@ -183,7 +202,7 @@ $citationHeight: 68px;
 }
 
 .citationContainer {
-	margin-top: 20px;
+	margin-top: 35px;
 	width: 95%;
 
 	display: grid;
@@ -269,8 +288,7 @@ $citationHeight: 68px;
 
 #topConneries { 
 	width: 467px;
-	height: 640px;
-	margin: auto;
+	height: 350px;
 
 	display: flex;
 	flex-direction: column;
@@ -300,7 +318,7 @@ $citationHeight: 68px;
 }
 
 .conneriesContainer {
-	margin-top: 20px;
+	margin-top: 10px;
 	width: 95%;
 
 	display: grid;
@@ -324,6 +342,8 @@ $citationHeight: 68px;
 // #topTags {
 // 	width: 350px;
 // 	height: 350px;
+//  display: flex;
+//	flex-direction: column;
 // }
 
 /* ----------------------------------------- */
@@ -393,4 +413,5 @@ $citationHeight: 68px;
 	width: 65px;
 	height: 25px;
 	}
+
 }

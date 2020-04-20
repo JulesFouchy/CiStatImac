@@ -17,7 +17,10 @@ export default (props) =>
                     options: {
                         scales: {
                             xAxes: [{
-                                stacked: true
+                                stacked: true,
+                                 gridLines: {
+                                    display: false,
+                                 }
                             }],
                             yAxes: [{
                                 stacked: true,
