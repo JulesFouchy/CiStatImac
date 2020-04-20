@@ -73,7 +73,8 @@ export default (state, actions) => {
                                     maxBarHeight : 200,
                                 },
                                
-                            ],                   
+                            ],   
+                            height : 280,                
                     }),     
                 ),
             ],

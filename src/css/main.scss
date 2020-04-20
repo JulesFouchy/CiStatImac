@@ -12,7 +12,7 @@ $defaultTextSize: 12px;
 body {
 	font-family: Roboto;
 	padding: 0; 
-	margin: 50px;
+	margin: 0px 50px;
 	align-items: center;
 	justify-content: center;
 	background: #E5E5E5;
@@ -156,10 +156,10 @@ a:hover {
 	color: #464646;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 19px;
 	line-height: 20px;
 
-	margin: 0;
+	margin-bottom: 25px;
 
 	text-align: left;
 }
@@ -172,7 +172,7 @@ $citationHeight: 68px;
 
 #topCitations { 
 	width: 467px;
-	height: 700px;
+	height: 610px;
 
 	display: flex;
 	flex-direction: column;
@@ -211,7 +211,8 @@ $citationHeight: 68px;
 }
 
 .citationContainer {
-	margin-top: 35px;
+	margin-top: 0px;
+	margin-bottom : 20px;
 	width: 95%;
 
 	display: grid;
@@ -237,7 +238,7 @@ $citationHeight: 68px;
 
 .pageNavigation {
 	margin-top: auto;
-	font-size: 13px;
+	font-size: 14px;
 	color: #6C6C6C;
 
 	display: flex;
@@ -255,7 +256,7 @@ $citationHeight: 68px;
 		border: 1px solid #DDDDDD;
 		box-sizing: border-box;
 		border-radius: 2px;
-		font-size: 9px;
+		font-size: 13px;
 		font-family: Roboto;
 		padding: 3px;
 		color: #6C6C6C;
@@ -297,7 +298,7 @@ $citationHeight: 68px;
 
 #topConneries { 
 	width: 300px;
-	height: 350px;
+	height: 365px;
 
 	display: flex;
 	flex-direction: column;
@@ -327,7 +328,8 @@ $citationHeight: 68px;
 }
 
 .conneriesContainer {
-	margin-top: 10px;
+	margin-top: 0px;
+	margin-bottom : 7px;
 	width: 95%;
 
 	display: grid;
@@ -350,7 +352,7 @@ $citationHeight: 68px;
 
  #topTags {
 	width: 500px;
-	height : 350px;
+	height : 365px;
 	display : flex;
 	flex-direction : column;
  }

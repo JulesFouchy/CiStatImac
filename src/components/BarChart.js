@@ -15,6 +15,7 @@ export default (props) =>
                         datasets: props.datasets,
                     },
                     options: {
+                        maintainAspectRatio: false,
                         scales: {
                             xAxes: [{
                                 stacked: true,
