@@ -14,7 +14,7 @@ export default (state, actions) => {
                 ),
                 h('div', { class: 'myBarChart' }, 
                     BarChart({
-                        labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+                        labels: ['2018','2019','2020','2021'],
                         datasets:
                             [
                                 {

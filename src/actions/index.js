@@ -93,8 +93,6 @@ export default {
           CITATIONS A TRAVERS LE TEMPS
     **************************************/
     computeTimeYear: () => state => {
-        
-
 
         const updateYear = (author) => {
             const tabYears =  6
