@@ -1,5 +1,6 @@
 import axios from 'axios'
 import getAuthorTypeFromID from '../helper/getAuthorTypeFromID'
+import updateYearChartData from '../updateChart/year'
 
 export default {
     loadDatabase: () => (state, actions) => {
@@ -37,6 +38,11 @@ export default {
     },
     setTypesAuteur: (typesAuteur) => (state) => {
         return {...state, dbTypesAuteur: typesAuteur}
+    },
+    setCitationsPerYear: (data) => (state) => {
+        const newState = {...state, yearDataset: data}
+        updateYearChartData(newState)
+        return newState
     },
     /**************************************
            TOP DES CITATIONS
@@ -92,6 +98,7 @@ export default {
     /**************************************
           CITATIONS A TRAVERS LE TEMPS
     **************************************/
+
     computeTimeYear: () => state => {
 
         const updateYear = (author) => {
