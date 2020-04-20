@@ -3,4 +3,5 @@ export default (state) => {
     state.yearChart.data.labels=state.yearsList,
     state.yearChart.data.datasets = state.yearsDatasets
     //.map(el => el.thickness)
+    // height : 200 px ??
 } 
