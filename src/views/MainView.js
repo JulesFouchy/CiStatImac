@@ -3,6 +3,7 @@ import TopCitations from './TopCitations'
 import TopConneries from './TopConneries'
 import TopTags from './TopTags'
 import OverTime from './OverTime'
+import Intro from './Intro'
 
 export default (state, actions) =>
     h('div',
@@ -14,9 +15,10 @@ export default (state, actions) =>
         },
         // ------------- SECTIONS --------------
         [
+            Intro(state, actions),
             TopCitations(state, actions),
             TopTags(state, actions),
             TopConneries(state, actions),
-            OverTime(state,actions)
+            OverTime(state, actions)
         ]
     )
