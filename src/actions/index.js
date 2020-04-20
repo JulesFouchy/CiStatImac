@@ -99,6 +99,11 @@ export default {
           CITATIONS A TRAVERS LE TEMPS
     **************************************/
 
+    setYearChart: (chart) => state => ({
+        ...state,
+        yearChart: chart
+    }),
+
     computeTimeYear: () => state => {
 
         const updateYear = (author) => {

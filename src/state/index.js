@@ -25,7 +25,7 @@ export default {
     topConneries: [],
     // -------- OVER TIME ------------
     showYears: true,
-    yearsList: ['2018','2019','2020'],
+    yearsList: [],
     yearDataset: [],
     yearChart: null,
 }
