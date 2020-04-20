@@ -14,73 +14,16 @@ export default (state, actions) => {
                 ),
                 h('div', { class: 'myBarChart' }, 
                     BarChart({
-                        labels: ['2018','2019','2020','2021'],
-                        datasets:
+                        labels: ['2018','2019','2020','2021','2022'],
+                        datasets: 
                             [
-                                {
-                                    label: 'IMAC 2022',
-                                    data: [67.8, 50, 3], // Année+Mois OU Annee
-                                    backgroundColor: '#874EDD',
-                                    maxBarThickness: 10,
+                                // {
+                                //     label: 'IMAC 2022',
+                                //     data: [67.8, 50, 3], // Année+Mois OU Annee
+                                //     backgroundColor: '#874EDD',
+                                //     maxBarThickness: 10,
                                     
-                                },
-                                {
-                                    label: 'IMAC 2021',
-                                    data: [20.7,12,3],
-                                    backgroundColor: '#4EDD98',
-                                    maxBarThickness: 10,
-                                },
-                                {
-                                    label: 'IMAC 2020',
-                                    data: [11.4, 12.3, 8.9],
-                                    backgroundColor: '#F45B80',
-                                    maxBarThickness: 10,
-                                },
-                                 {
-                                    label: 'IMAC 2019',
-                                    data: [11.4, 12.3, 8.9],
-                                     backgroundColor: '#5CDCEE',
-                                     maxBarThickness: 10,
-                                     hidden: true,
-
-                                },
-                                {
-                                    label: 'IMAC 2018',
-                                    data: [11.4, 12.3, 8.9],
-                                    backgroundColor: '#4670DD',
-                                    maxBarThickness: 10,
-                                    hidden: true,
-
-                                },
-                                {
-                                    label: 'IMAC 100 AV. BIRI',
-                                    data: [11.4, 12.3, 8.9],
-                                    backgroundColor: '#F9822C',
-                                    maxBarThickness: 10,
-                                    hidden: true,
-                                },
-                                {
-                                    label: 'PROF',
-                                    data: [11.4, 12.3, 8.9],
-                                    backgroundColor: '#FDC132',
-                                    maxBarThickness: 10,
-                                },
-                                {
-                                    label: 'ADMINISTRATION',
-                                    data: [11.4, 12.3, 8.9],
-                                    backgroundColor: '#439E2D',
-                                    maxBarThickness: 10,
-                                    hidden: true,
-
-                                },
-                                {
-                                    label: 'AUTRE',
-                                    data: [11.4, 12.3, 8.9],
-                                    backgroundColor: '#B90000',
-                                    maxBarThickness: 10,
-                                    hidden: true,
-                                },
-                               
+                                // },   
                             ],   
                             height : 280,   
                     }),     
