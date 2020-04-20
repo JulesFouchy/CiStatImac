@@ -8,14 +8,18 @@ const computeTopTags = (state, tagCitationAssociations) => {
         acc[el["idTag"]] = (acc[el["idTag"]] || 0) + 1;
         return acc;
     }, {})
-    return Object.entries(tagsCount).map( pair => {
-        const id = pair[0]; const count = pair[1]
-        const tagObj = state.dbTags.find( tag => tag['id'] === id)
-        return {
-            ...tagObj,
-            count: count
-        }
-    })
+    const asArray = 
+        Object.entries(tagsCount).map( pair => {
+            const id = pair[0]; const count = pair[1]
+            const tagObj = state.dbTags.find( tag => tag['id'] === id)
+            return {
+                ...tagObj,
+                count: count
+            }
+        })
+    const sorted = asArray.sort( (a, b) => b['count'] - a['count'] )
+    console.log(sorted)
+    return sorted
 }
 
 export default (state) => {
@@ -25,13 +29,28 @@ export default (state) => {
             title: 'Podium des Tags',
             children: [
                 PieChart({
+                    size: '650px',
                     acquireData: async (chart) => {
                         const data = await getTagCitationAssociations()
                         const topTags = computeTopTags(state, data)
                         //
                         chart.data.labels = topTags.map( el => el.name)
                         chart.data.datasets[0].data = topTags.map( el => el.count)
-                        chart.data.datasets[0].backgroundColor = topTags.map( el => el.color)
+                        chart.data.datasets[0].borderWidth = new Array(12).fill(5)
+                        chart.data.datasets[0].backgroundColor = [
+                            '#874EDD',
+                            '#4EDD98',
+                            '#F45B80',
+                            '#FDC132',
+                            '#5CDCEE',
+                            '#4670DD',
+                            '#F9822C',
+                            '#B90000',
+                            '#35ADC8',
+                            '#36316F',
+                            '#C535C8',
+                            '#439E2D',
+                        ]
                         //
                         chart.update({duration: 800})
                     }

@@ -11,8 +11,13 @@ export default (props) =>
                     responsive: true,
                     data: {
                         datasets: [{}]
+                    },
+                    options: {
+                        cutoutPercentage: 55
                     }
                 })
+                chart.canvas.style.height = props.size
+                chart.canvas.style.width = props.size
                 props.acquireData(chart)
             }
         })
