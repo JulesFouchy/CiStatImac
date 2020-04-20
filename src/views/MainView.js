@@ -12,6 +12,7 @@ export default (state, actions) =>
             id: 'mainView',
             oncreate: () => {
                 actions.loadDatabase()
+                actions.computeYearList()
                 getCitationsPerYear().then( response => actions.setCitationsPerYear(response) )
             }
         },

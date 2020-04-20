@@ -103,7 +103,15 @@ export default {
         ...state,
         yearChart: chart
     }),
-
+    computeYearList: () => state => {
+        const currentYear = new Date().getFullYear()
+        const nbYears = currentYear - 2018 + 1
+        const yearsList = new Array(nbYears).fill(0).map( (el, index) => 2018 + index )
+        return {
+            ...state,
+            yearsList: yearsList
+        }
+    },
     computeTimeYear: () => state => {
 
         const updateYear = (author) => {
