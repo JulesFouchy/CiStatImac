@@ -8,6 +8,6 @@ export default (props) =>
         Ranking({number: props.ranking}),
         h('p', {class: 'authorType'}, 'Les ' + props.authorType),
         Box({ content: [
-            h('div', {class: 'nbCitationsAuthorType'}, props.nbCitationsAuthorType + ' citations')
+            h('div', {class: 'nbCitationsAuthorType'}, props.nbCitationsAuthorType + (props.nbCitationsAuthorType === 1 ? ' citation' : ' citations'))
         ]})
     ])
