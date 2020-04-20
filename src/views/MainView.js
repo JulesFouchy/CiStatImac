@@ -17,10 +17,34 @@ export default (state, actions) =>
         },
         // ------------- SECTIONS --------------
         [
-            Intro(state, actions),
-            TopCitations(state, actions),
-            TopTags(state, actions),
-            TopConneries(state, actions),
-            OverTime(state, actions)
+            h('div',
+                { 
+                    id: 'allSections'
+                },
+                [
+                h('div',
+                {
+                    id : 'sectionsLeft'
+                },
+                [
+                Intro(state, actions),
+                TopCitations(state, actions),
+                ]),
+                h('div',
+                    {
+                        id : 'sectionsRight'
+                    },
+                    [
+                        OverTime(state, actions),
+                        h('div',
+                        {
+                            id : 'sectionsBottomRight'
+                        },
+                        [
+                        TopTags(state, actions),
+                        TopConneries(state, actions)
+                    ])
+                ]),
+            ]),
         ]
     )

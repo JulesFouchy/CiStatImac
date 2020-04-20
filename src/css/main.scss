@@ -5,6 +5,10 @@ $myGrey75: #757575;
 
 $defaultTextSize: 12px;
 
+/* --------------------------------- */
+/* -------------- BODY ------------- */
+/* --------------------------------- */
+
 body {
 	font-family: Roboto;
 	padding: 0; 
@@ -25,6 +29,30 @@ a:hover {
 
 .section {
 	margin: 25px;
+}
+
+#allSections {
+ display : flex;
+ justify-content: space-around;
+
+}
+
+#sectionsLeft{
+	display : flex;
+	flex-direction: column;
+ 	justify-content: space-around;
+
+}
+
+#sectionsRight{
+	display : flex;
+	flex-direction: column;
+ 	justify-content: space-around;
+}
+
+#sectionsBottomRight{
+	display : flex;
+ 	justify-content: space-around;
 }
 
 /* --------------------------------- */
