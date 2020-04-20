@@ -74,10 +74,10 @@ export default (state, actions) => {
                                 },
                                
                             ],                   
-                    }),   
+                    }),     
                 ),
-            ]
-        })
+            ],
+        })   
     )
 }
 
