@@ -20,7 +20,7 @@ export default {
     topCitations: [],
     topCitations_CurrentPage: 0,
     topCitations_NavContent: 1,
-    topCitations_NbCitatsPerPage: 6,
+    topCitations_NbCitatsPerPage: 5,
     // -------- TOP CONNERIES --------
     topConneries: [],
     // -------- OVER TIME ------------
