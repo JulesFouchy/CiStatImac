@@ -395,7 +395,7 @@ $citationHeight: 68px;
 
 	}
 
-	select{
+	select:disabled{
 	
 	/* Base/White */
 
@@ -410,7 +410,7 @@ $citationHeight: 68px;
 	height: 25px;
 	}
 
-	.selectedDate{
+	select:enabled{
 	
 	/* Selected*/
 
