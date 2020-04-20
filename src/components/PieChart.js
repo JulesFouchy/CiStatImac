@@ -14,6 +14,14 @@ export default (props) =>
                     },
                     options: {
                         cutoutPercentage: 55,
+                        layout: {
+                            padding: {
+                                top: 20,
+                                right: 15,
+                                left: 0,
+                                bottom: 0
+                            }
+                        },
                         legend: {
                             position: 'right',
                             labels: {
