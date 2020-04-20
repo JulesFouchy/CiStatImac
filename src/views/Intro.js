@@ -7,9 +7,11 @@ export default (state) => {
             id: 'intro',
             title: 'CitatiStats',
             children: [
-                h('p', {class: 'introText'}),
-                h('button') //do onclick
+                h('p', {class: 'introText'}, "Petite description lalala"),
+                //h('button', {onclick: "www.google.fr"}) 
             ]
         })
     )
 }
+
+// h('button', { onclick: props.onClick }, props.text)
