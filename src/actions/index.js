@@ -92,19 +92,44 @@ export default {
     /**************************************
           CITATIONS A TRAVERS LE TEMPS
     **************************************/
-    computeCitationTime: () => state => {
-        const test = {
-            count: 0
-        };
+    computeTimeYear: () => state => {
 
-        const actions = {
-            updateYear: () => ({ count: (test.count += 1) }),
-            updateMonth: () => ({ count: (test.count -= 1) })
-        };
+        const updateYear = (author) => {
+            const tabYears =  6
+
+            const citationsCount = state.dbCitations.reduce((acc, citation) => {
+                const author = getAuthorTypeFromID(state, citation.idTypeAuteur)
+                acc[author] = (acc[authorType] || 0) + 1; // Où placer la date ?
+                return acc
+            }, {})
+            const tab = Object.entries(citationsCount).map(pair => {
+                const authorType = pair[0]; const count = pair[1]
+                return {
+                    authorType: authorType,
+                    nbCitationsAuthorType: count
+                }
+            })
+
+            return tabYear;
+        
+        }
 
         return {
             ...state,
-            nbCitationsTime : test
+            nbCitationsYears : tabYear
+        }
+    },
+
+    computeTimeMonth: () => state => {
+        const updateMonth = (author, year) => {
+            const tabMonth = 2
+            return tabMonth
+
+        }
+
+        return {
+            ...state,
+            nbCitationsMonth: tabMonth
         }
     },
     

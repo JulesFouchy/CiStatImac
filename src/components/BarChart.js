@@ -26,7 +26,14 @@ export default (props) =>
                             yAxes: [{
                                 stacked: true,
                             }]
-                        }
+                        },
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                usePointStyle: true,
+                                boxWidth: 10,
+                            },
+                        },
                     },
                     responsive: true,
                 })

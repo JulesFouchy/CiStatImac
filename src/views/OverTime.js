@@ -14,7 +14,7 @@ export default (state, actions) => {
                 ),
                 h('div', { class: 'myBarChart' }, 
                     BarChart({
-                        labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+                        labels: ['2018','2019','2020','2021'],
                         datasets:
                             [
                                 {
@@ -22,6 +22,7 @@ export default (state, actions) => {
                                     data: [67.8, 50, 3], // Année+Mois OU Annee
                                     backgroundColor: '#874EDD',
                                     maxBarThickness: 10,
+                                    
                                 },
                                 {
                                     label: 'IMAC 2021',
@@ -40,18 +41,23 @@ export default (state, actions) => {
                                     data: [11.4, 12.3, 8.9],
                                      backgroundColor: '#5CDCEE',
                                      maxBarThickness: 10,
+                                     hidden: true,
+
                                 },
                                 {
                                     label: 'IMAC 2018',
                                     data: [11.4, 12.3, 8.9],
                                     backgroundColor: '#4670DD',
                                     maxBarThickness: 10,
+                                    hidden: true,
+
                                 },
                                 {
                                     label: 'IMAC 100 AV. BIRI',
                                     data: [11.4, 12.3, 8.9],
                                     backgroundColor: '#F9822C',
                                     maxBarThickness: 10,
+                                    hidden: true,
                                 },
                                 {
                                     label: 'PROF',
@@ -64,17 +70,19 @@ export default (state, actions) => {
                                     data: [11.4, 12.3, 8.9],
                                     backgroundColor: '#439E2D',
                                     maxBarThickness: 10,
+                                    hidden: true,
+
                                 },
                                 {
                                     label: 'AUTRE',
                                     data: [11.4, 12.3, 8.9],
                                     backgroundColor: '#B90000',
                                     maxBarThickness: 10,
-                                    maxBarHeight : 200,
+                                    hidden: true,
                                 },
                                
                             ],   
-                            height : 280,                
+                            height : 280,   
                     }),     
                 ),
             ],
