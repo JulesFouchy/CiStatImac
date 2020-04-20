@@ -157,7 +157,7 @@ a:hover {
 	color: #464646;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 19px;
+	font-size: 1em;
 	line-height: 0px;
 
 	margin-bottom: 30px;
@@ -171,7 +171,7 @@ a:hover {
 
 .introText {
 	font-style: italic;
-	font-size: 1em;
+	font-size: 0.9em;
 	line-height: auto;
 
 	color: $myGrey75;
@@ -182,6 +182,7 @@ a:hover {
 	padding: 2% 0;
 	text-transform: uppercase;
 	font-weight: bold;
+	font-size: 0.9em;
 	letter-spacing: 0.05em;
 }
 
@@ -259,7 +260,7 @@ $citationHeight: 68px;
 
 .pageNavigation {
 	margin-top: auto;
-	font-size: 14px;
+	font-size: 0.6em;
 	color: #6C6C6C;
 
 	display: flex;
@@ -277,7 +278,7 @@ $citationHeight: 68px;
 		border: 1px solid #DDDDDD;
 		box-sizing: border-box;
 		border-radius: 2px;
-		font-size: 13px;
+		font-size: 1em;
 		font-family: Roboto;
 		padding: 3px;
 		color: #6C6C6C;
