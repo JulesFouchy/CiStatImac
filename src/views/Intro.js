@@ -10,7 +10,7 @@ export default (state) => {
             title: 'CitatiStats',
             children: [
                 h('p', {class: 'introText'}, 'Petite description lalala'),
-                h('a', {href: 'http://perso-etudiant.u-pem.fr/~akohlmul/citatimac/'}, 
+                h('a', {href: 'http://perso-etudiant.u-pem.fr/~akohlmul/citatimac2/'}, 
                     Box({content:
                         'Citat\'Imac'
                     })
