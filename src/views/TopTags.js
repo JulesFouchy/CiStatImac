@@ -29,14 +29,14 @@ export default (state) => {
             title: 'Podium des Tags',
             children: [
                 PieChart({
-                    size: '650px',
+                    //size: '325px',
                     acquireData: async (chart) => {
                         const data = await getTagCitationAssociations()
                         const topTags = computeTopTags(state, data)
                         //
                         chart.data.labels = topTags.map( el => el.name)
                         chart.data.datasets[0].data = topTags.map( el => el.count)
-                        chart.data.datasets[0].borderWidth = new Array(12).fill(5)
+                        chart.data.datasets[0].borderWidth = new Array(12).fill(2)
                         chart.data.datasets[0].backgroundColor = [
                             '#874EDD',
                             '#4EDD98',

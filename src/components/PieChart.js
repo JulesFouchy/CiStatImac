@@ -13,11 +13,16 @@ export default (props) =>
                         datasets: [{}]
                     },
                     options: {
-                        cutoutPercentage: 55
+                        cutoutPercentage: 55,
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                usePointStyle: true,
+                                boxWidth: 6
+                            }
+                        }
                     }
                 })
-                chart.canvas.style.height = props.size
-                chart.canvas.style.width = props.size
                 props.acquireData(chart)
             }
         })
