@@ -1,5 +1,7 @@
 import { h } from 'hyperapp'
 import Section from '../components/Section'
+import Button from '../components/Button'
+
 
 export default (state) => {
     return (
@@ -8,10 +10,9 @@ export default (state) => {
             title: 'CitatiStats',
             children: [
                 h('p', {class: 'introText'}, "Petite description lalala"),
-                //h('button', {onclick: "www.google.fr"}) 
+                Button({ text: 'Essai', onclick: console.log("hello")})
             ]
         })
     )
 }
 
-// h('button', { onclick: props.onClick }, props.text)
