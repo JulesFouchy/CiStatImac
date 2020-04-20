@@ -15,7 +15,7 @@ export default (state, actions) => {
                 h('div', { class: 'myBarChart' }, 
                     BarChart({
                     labels : state.labelsList,
-                    datasets: state.yearDataset, //.map((label) => ({ ...label, maxBarThickness: 10})),
+                    datasets: [state.yearDataset], //.map((label) => ({ ...label, maxBarThickness: 10})),
                     height : 280,   
                     }),     
                 ),

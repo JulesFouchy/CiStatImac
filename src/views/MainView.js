@@ -4,7 +4,7 @@ import TopConneries from './TopConneries'
 import TopTags from './TopTags'
 import OverTime from './OverTime'
 import Intro from './Intro'
-import Chart from 'chart.js'
+import getCitationsPerYear from '../api/getCitationsPerYear'
 
 export default (state, actions) =>
     h('div',
@@ -12,7 +12,7 @@ export default (state, actions) =>
             id: 'mainView',
             oncreate: () => {
                 actions.loadDatabase()
-                Chart.defaults.global.defaultFontFamily = 'Roboto'
+                getCitationsPerYear().then( response => actions.setCitationsPerYear(response) )
             }
         },
         // ------------- SECTIONS --------------
