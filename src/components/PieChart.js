@@ -33,6 +33,6 @@ export default (props) =>
                 })
                 props.acquireData(chart)
             },
-            height: 170,
+            height: 180,
         })
     ])
