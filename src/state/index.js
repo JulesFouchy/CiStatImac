@@ -22,5 +22,67 @@ export default {
     topCitations_NavContent: 1,
     topCitations_NbCitatsPerPage: 6,
     // -------- TOP CONNERIES --------
-    topConneries: []
+    topConneries: [],
+    // -------- OVER TIME ------------
+    showYears: true,
+    yearsList: ['2018','2019','2020'],
+    monthList: ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'],
+    labelsList : (showYears ?  yearsList : monthList),
+    yearDataset:
+    [
+        {
+            label: 'IMAC 2022',
+            data: [67.8, 50, 3],
+            backgroundColor: '#B90000',
+            hidden: false,
+        },
+        {
+            label: 'IMAC 2021',
+            data: [20.7,12,3],
+            backgroundColor: '#B90000',
+            hidden: false,
+        },
+        {
+            label: 'IMAC 2020',
+            data: [11.4, 12.3, 8.9],
+            backgroundColor: '#B90000',
+            hidden: true,
+        },
+            {
+            label: 'IMAC 2019',
+            data: [11.4, 12.3, 8.9],
+            backgroundColor: '#B90000',
+            hidden: true,
+        },
+        {
+            label: 'IMAC 2018',
+            data: [11.4, 12.3, 8.9],
+            backgroundColor: '#B90000',
+            hidden: true,
+        },
+        {
+            label: 'IMAC 100 AV. BIRI',
+            data: [11.4, 12.3, 8.9],
+            backgroundColor: '#F9822C',
+            hidden: true,
+        },
+        {
+            label: 'PROF',
+            data: [11.4, 12.3, 8.9],
+            backgroundColor: '#FDC132',
+        },
+        {
+            label: 'ADMINISTRATION',
+            data: [11.4, 12.3, 8.9],
+            backgroundColor: '#439E2D',
+            hidden: true,
+
+        },
+        {
+            label: 'AUTRE',
+            data: [11.4, 12.3, 8.9],
+            backgroundColor: '#B90000',
+            hidden: true,
+        },
+    ],
 }
