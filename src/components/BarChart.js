@@ -12,7 +12,7 @@ export default (props) =>
                     type: 'bar',
                     data: {
                         labels: [],
-                        datasets: [],
+                        datasets: [{}],
                     },
                     options: {
                         maintainAspectRatio: false,
@@ -28,10 +28,10 @@ export default (props) =>
                             }]
                         },
                         legend: {
-                            position: 'top',
+                            position: 'right',
                             labels: {
                                 usePointStyle: true,
-                                boxWidth: 10,
+                                boxWidth: 6,
                             },
                         },
                     },

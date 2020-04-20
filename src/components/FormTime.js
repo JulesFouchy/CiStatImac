@@ -6,7 +6,7 @@ export default (props) =>
         Button({class: 'selectedButton', text: 'Les années', selected : true, onClick: props.updateYear}),
         Button({text: 'Les mois', onClick: props.updateMonth }),
         h('select',{
-            disable : true,
+            disabled : true,
             id: 'monthSelector',
         },
             [
