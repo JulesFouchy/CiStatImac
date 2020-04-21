@@ -18,7 +18,6 @@ const computeTopTags = (state, tagCitationAssociations) => {
             }
         })
     const sorted = asArray.sort( (a, b) => b['count'] - a['count'] )
-    console.log(sorted)
     return sorted
 }
 

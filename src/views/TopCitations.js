@@ -24,14 +24,10 @@ export default (state, actions) => {
                             actions.setNavContentToEmpty()
                         else {
                             const p = event.target.value === ' ' ? NaN : Number(event.target.value)
-                            console.log(p)
-                            console.log(Number.isInteger(p))
                             if (Number.isInteger(p)) {
                                 actions.topCitationsNavToPage( Math.min(Math.max(p, 1), maxNbPages) - 1 )
                                 actions.computeTopCitations()
                             } else {
-                                if (state.topCitations_NavContent === ' ')
-                                    console.log('stfu')
                                 if (state.topCitations_NavContent !== '')
                                     actions.topCitationsNavToPage( state.topCitations_CurrentPage )
                                 else {
