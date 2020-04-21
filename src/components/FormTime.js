@@ -1,10 +1,13 @@
 import { h } from 'hyperapp'
-import Button from './Button'
 
-export default (props) =>
-    h('div', { class: 'formTime' }, [
-        Button({class: 'selectedButton', text: 'Les années', selected : true, onClick: props.updateYear}),
-        Button({text: 'Les mois', onClick: props.updateMonth }),
+export default (state, actions, props) =>
+    h('div', {class: 'formTime'}, [
+        h('button', {disabled : state.bShowYears, onclick: actions.switchOverTimeChart},
+            'Par année'
+        ),
+        h('button', {disabled : !state.bShowYears, onclick: actions.switchOverTimeChart},
+            'Par mois'
+        ),
         h('select',{
             disabled : true,
             id: 'monthSelector',

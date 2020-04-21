@@ -111,6 +111,16 @@ export default {
         ...state,
         overTimeChart: chart
     }),
+    switchOverTimeChart: () => state => {
+        if (state.bShowYears)
+            setOverTimeToMonths(state)
+        else
+            setOverTimeToYears(state)
+        return {
+            ...state,
+            bShowYears: !state.bShowYears
+        }
+    },
     computeYearList: () => state => {
         const currentYear = new Date().getFullYear()
         const nbYears = currentYear - 2019 + 1

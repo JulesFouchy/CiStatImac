@@ -383,37 +383,32 @@ $citationHeight: 68px;
 /* ----------------------------------------- */
 
 .formTime{
-	
-
 	button {
-
-	background: rgba(201, 201, 201, 0.1);
-	border-radius: 4px;
-	text-align: center;
-	color : #9C9C9C;;
-	margin : 3px;
-	width: 85px;
-	height: 25px;	
-	margin : 3px;
-	width: 85px;
-	height: 25px;
-
-}
-
-	.selectedButton{
-
-	background: #FDDA3E;
-	mix-blend-mode: normal;
-	border: 1px solid #FDD31C;
-	box-sizing: border-box;
-	border-radius: 4px;
-	text-align: center;
-	font-style : bold;
-	color : white;
-	margin : 3px;
-	width: 85px;
-	height: 25px;
-
+		&:enabled {
+			background: rgba(201, 201, 201, 0.1);
+			border-radius: 4px;
+			text-align: center;
+			color : #9C9C9C;;
+			margin : 3px;
+			width: 85px;
+			height: 25px;	
+			margin : 3px;
+			width: 85px;
+			height: 25px;
+		}
+		&:disabled {
+			background: #FDDA3E;
+			mix-blend-mode: normal;
+			border: 1px solid #FDD31C;
+			box-sizing: border-box;
+			border-radius: 4px;
+			text-align: center;
+			font-style : bold;
+			color : white;
+			margin : 3px;
+			width: 85px;
+			height: 25px;
+		}
 	}
 
 	select:disabled{
