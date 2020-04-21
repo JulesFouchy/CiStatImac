@@ -56,7 +56,7 @@ export default (props) =>
                 })
                 if (props.callback !== undefined) { props.callback(c) }
             },
-            style: 'background-color: #fff;'
+            style: 'background-color: #fff; width : 39%; margin-top : 2%;'
         })
     ])
     

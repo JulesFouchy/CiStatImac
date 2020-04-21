@@ -20,20 +20,17 @@ const dataTemplate = [
         label: 'IMAC 2019',
         id: '7',
         backgroundColor: '#5CDCEE',
-        hidden: true,
     },
     {
         label: 'IMAC 2018',
         id: '6',
         backgroundColor: '#4670DD',
-        hidden: true,
 
     },
     {
         label: 'IMAC 100 AV. BIRI',
         id: '4',
         backgroundColor: '#F9822C',
-        hidden: true,
     },
     {
         label: 'PROF',
@@ -41,16 +38,9 @@ const dataTemplate = [
         backgroundColor: '#FDC132',
     },
     {
-        label: 'ADMINISTRATION',
-        id: '3',
-        backgroundColor: '#439E2D',
-        hidden: true,
-    },
-    {
         label: 'AUTRE',
         id: '1',
         backgroundColor: '#B90000',
-        hidden: true,
     },
 ]
 

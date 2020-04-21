@@ -4,6 +4,7 @@ import Chart from 'chart.js'
 export default (props) =>
     h('div', {}, [
         h('canvas', {
+            id : 'myPieChart',
             oncreate: (element) => {
                 const ctx = element.getContext('2d')
                 const chart = new Chart(ctx, {
@@ -16,8 +17,8 @@ export default (props) =>
                         cutoutPercentage: 55,
                         layout: {
                             padding: {
-                                top: 20,
-                                right: 15,
+                                top: 5,
+                                right: 5,
                                 left: 0,
                                 bottom: 0
                             }
@@ -44,10 +45,10 @@ export default (props) =>
                                 }
                             }
                         },
-                    }
+                    },
                 })
                 props.acquireData(chart)
             },
-            height: 180,
+            style: 'height : 100%;'
         })
     ])
