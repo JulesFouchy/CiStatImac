@@ -9,7 +9,7 @@ export default (state, actions, props) =>
             'Par mois'
         ),
         h('select',{
-            disabled : true,
+            hidden : state.bShowYears,
             id: 'monthSelector',
         },
             [
