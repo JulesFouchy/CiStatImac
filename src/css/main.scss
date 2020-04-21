@@ -260,7 +260,7 @@ $citationHeight: 68px;
 
 .pageNavigation {
 	margin-top: auto;
-	font-size: 0.6em;
+	font-size: 0.7em;
 	color: #6C6C6C;
 
 	display: flex;
@@ -320,7 +320,7 @@ $citationHeight: 68px;
 
 #topConneries { 
 	width: 300px;
-	height: 365px;
+	//height: 355px;
 
 	display: flex;
 	flex-direction: column;
@@ -374,7 +374,7 @@ $citationHeight: 68px;
 
  #topTags {
 	width: 500px;
-	height : 365px;
+	//height : 355px;
 	display : flex;
 	flex-direction : column;
  }
@@ -382,7 +382,9 @@ $citationHeight: 68px;
 /* ----------------------------------------- */
 /* --------- CITATIONS PAR PERIODE --------- */
 /* ----------------------------------------- */
-
+#overTime {
+	//height: ;
+}
 .formTime{
 	button {
 		&:enabled {
