@@ -10,12 +10,13 @@ export default (state, actions) => {
             id: 'overTime',
             title: 'Les citations à travers le temps',
             children: [
-                h('div', { class: 'formForChart' }, FormTime
-                ),
+                h('div', { class: 'formForChart' }, FormTime),
                 h('div', { class: 'myBarChart' }, 
-                    BarChart({callBack: (chart) => {
-                        actions.setYearChart(chart)
-                    }})  
+                    BarChart({
+                        callBack: (chart) => {
+                            actions.setYearChart(chart)
+                        }
+                    })
                 ),
             ],
         })   
