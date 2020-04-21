@@ -4,6 +4,7 @@ $myVioletDarker: #723fbf;
 $myGrey75: #757575;
 $myBlue: #8B9AFF;
 $myGreyE5: #E5E5E5;
+$myBg: #F9F9F9;
 
 $defaultTextSize: 12px;
 
@@ -17,7 +18,7 @@ body {
 	margin: 0 5%;
 	align-items: center;
 	justify-content: center;
-	background: $myBlue;
+	background: $myGreyE5;
 	display: flex;
 }
 
