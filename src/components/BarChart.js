@@ -34,6 +34,23 @@ export default (props) =>
                                 boxWidth: 6,
                             },
                         },
+                        tooltips: { // Thanks to https://stackoverflow.com/questions/37257034/chart-js-2-0-doughnut-tooltip-percentages/49717859#49717859
+                            callbacks: {
+                                label: (tooltipItem, data) =>  {
+                                    const dataset = data.datasets[tooltipItem.datasetIndex]
+                                    const currentValue = dataset.data[tooltipItem.index]
+                                    const meta = dataset._meta[Object.keys(dataset._meta)[0]]
+                                    const total = data.datasets.reduce( (acc, el) => {
+                                        return acc + el.data[tooltipItem.index]
+                                    }, 0)
+                                    return ' ' + currentValue + ' sur ' + total
+                                },
+                                title: (tooltipItem, data) => {
+                                    const dataset = data.datasets[tooltipItem[0].datasetIndex]
+                                    return dataset.label
+                                }
+                            }
+                        },
                     },
                     responsive: true,
                 })
