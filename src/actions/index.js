@@ -1,6 +1,6 @@
 import axios from 'axios'
 import getAuthorTypeFromID from '../helper/getAuthorTypeFromID'
-import updateYearChartData from '../updateChart/year'
+import setOverTimeToYears from '../overTimeChart/setToYears'
 
 export default {
     loadDatabase: () => (state, actions) => {
@@ -40,8 +40,9 @@ export default {
         return {...state, dbTypesAuteur: typesAuteur}
     },
     setCitationsPerYear: (data) => (state) => {
-        const newState = {...state, yearDatasets: data}
-        updateYearChartData(newState)
+        const newState = {...state, yearsDatasets: data}
+        if (state.bShowYears)
+            setOverTimeToYears(newState)
         return newState
     },
     /**************************************

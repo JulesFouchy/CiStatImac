@@ -24,9 +24,9 @@ export default {
     // -------- TOP CONNERIES --------
     topConneries: [],
     // -------- OVER TIME ------------
-    showYears: true,
+    bShowYears: true,
     yearsList: [],
-    yearDatasets: [],
+    yearsDatasets: [],
     monthsDatasets: [],
     overTimeChart: null,
 }
