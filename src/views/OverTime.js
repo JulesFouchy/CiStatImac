@@ -13,7 +13,7 @@ export default (state, actions) => {
                 h('div', { class: 'formForChart' }, FormTime),
                 h('div', { class: 'myBarChart' }, 
                     BarChart({
-                        callBack: (chart) => {
+                        callback: (chart) => {
                             actions.setYearChart(chart)
                         }
                     })
