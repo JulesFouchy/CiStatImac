@@ -2,12 +2,6 @@ import { h } from 'hyperapp'
 
 export default (state, actions, props) =>
     h('div', {class: 'formTime'}, [
-        h('button', {disabled : state.bShowYears, onclick: actions.switchOverTimeChart},
-            'Par année'
-        ),
-        h('button', {disabled : !state.bShowYears, onclick: actions.switchOverTimeChart},
-            'Par mois'
-        ),
         h('select',
             {
                 hidden : state.bShowYears,
@@ -16,9 +10,15 @@ export default (state, actions, props) =>
                 onchange: (event) => actions.setSelectedSchoolYear(Number(event.target.selectedOptions[0].value))
             },
             schoolYearsOptionsList()
+        ),
+        h('button', {disabled : state.bShowYears, onclick: actions.switchOverTimeChart},
+            'Par année'
+        ),
+        h('button', {disabled : !state.bShowYears, onclick: actions.switchOverTimeChart},
+            'Par mois'
         )
-     //Bouton byMonth
-     // Slider pour les mois / années
+        //Bouton byMonth
+        // Slider pour les mois / années
     ])
 
 const getSchoolYear = (date) => {

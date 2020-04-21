@@ -19,9 +19,9 @@ export default (props) =>
                         scales: {
                             xAxes: [{
                                 stacked: true,
-                                 gridLines: {
+                                gridLines: {
                                     display: false,
-                                 }
+                                }
                             }],
                             yAxes: [{
                                 stacked: true,
@@ -31,7 +31,7 @@ export default (props) =>
                             position: 'right',
                             labels: {
                                 usePointStyle: true,
-                                boxWidth: 6,
+                                boxWidth: 4,
                             },
                         },
                         tooltips: { // Thanks to https://stackoverflow.com/questions/37257034/chart-js-2-0-doughnut-tooltip-percentages/49717859#49717859
@@ -59,3 +59,4 @@ export default (props) =>
             style: 'background-color: #fff;'
         })
     ])
+    

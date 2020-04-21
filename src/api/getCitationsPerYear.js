@@ -16,7 +16,7 @@ const dataTemplate = [
         id: '8',
         backgroundColor: '#F45B80',
     },
-     {
+    {
         label: 'IMAC 2019',
         id: '7',
         backgroundColor: '#5CDCEE',

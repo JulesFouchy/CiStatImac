@@ -20,33 +20,33 @@ export default (state, actions) =>
         // ------------- SECTIONS --------------
         [
             h('div',
-                { 
+                {
                     id: 'allSections'
                 },
                 [
-                h('div',
-                {
-                    id : 'sectionsLeft'
-                },
-                [
-                Intro(state, actions),
-                TopCitations(state, actions),
-                ]),
-                h('div',
-                    {
-                        id : 'sectionsRight'
-                    },
-                    [
-                        OverTime(state, actions),
-                        h('div',
+                    h('div',
                         {
-                            id : 'sectionsBottomRight'
+                            id : 'sectionsLeft'
                         },
                         [
-                        TopTags(state, actions),
-                        TopConneries(state, actions)
-                    ])
+                            Intro(state, actions),
+                            TopCitations(state, actions),
+                        ]),
+                    h('div',
+                        {
+                            id : 'sectionsRight'
+                        },
+                        [
+                            OverTime(state, actions),
+                            h('div',
+                                {
+                                    id : 'sectionsBottomRight'
+                                },
+                                [
+                                    TopTags(state, actions),
+                                    TopConneries(state, actions)
+                                ])
+                        ]),
                 ]),
-            ]),
         ]
     )

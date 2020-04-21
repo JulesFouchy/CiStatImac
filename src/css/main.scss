@@ -190,7 +190,7 @@ a:hover {
 /* ----------- TOP DES CITATIONS ----------- */
 /* ----------------------------------------- */
 
-$citationHeight: 68px;
+$citationHeight: 60px;
 
 #topCitations { 
 	width: 467px;
@@ -379,13 +379,20 @@ $citationHeight: 68px;
 	flex-direction : column;
  }
 
+ 
+
 /* ----------------------------------------- */
 /* --------- CITATIONS PAR PERIODE --------- */
 /* ----------------------------------------- */
 #overTime {
-	//height: ;
+	
 }
+canvas {
+	height: 200px;
+}
+
 .formTime{
+	text-align: right;
 	button {
 		&:enabled {
 			background: rgba(201, 201, 201, 0.1);
@@ -394,13 +401,10 @@ $citationHeight: 68px;
 			color : #9C9C9C;;
 			margin : 3px;
 			width: 85px;
-			height: 25px;	
-			margin : 3px;
-			width: 85px;
 			height: 25px;
 		}
 		&:disabled {
-			background: #FDDA3E;
+			background: $myOrange;
 			mix-blend-mode: normal;
 			border: 1px solid #FDD31C;
 			box-sizing: border-box;
@@ -434,10 +438,10 @@ $citationHeight: 68px;
 	/* Selected*/
 
 	background: #FFFFFF;
-	border: 2px solid #FDD31C;
+	border: 1.5px solid #9C9C9C;
 	box-sizing: border-box;
 	border-radius: 4px;	
-	color: #FDD31C;
+	color: #9C9C9C;
 	font-style : bold;
 	margin : 3px;
 	width: auto;

@@ -1,14 +1,14 @@
-import { h } from 'hyperapp'
+//import { h } from 'hyperapp'
 import Section from '../components/Section'
 import PieChart from '../components/PieChart'
 import getTagCitationAssociations from '../api/getTagCitationAssociations'
 
 const computeTopTags = (state, tagCitationAssociations) => {
     const tagsCount = tagCitationAssociations.reduce((acc, el) => {
-        acc[el["idTag"]] = (acc[el["idTag"]] || 0) + 1;
-        return acc;
+        acc[el['idTag']] = (acc[el['idTag']] || 0) + 1
+        return acc
     }, {})
-    const asArray = 
+    const asArray =
         Object.entries(tagsCount).map( pair => {
             const id = pair[0]; const count = pair[1]
             const tagObj = state.dbTags.find( tag => tag['id'] === id)

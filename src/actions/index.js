@@ -84,7 +84,7 @@ export default {
     computeTopConneries: () => state => {
         const citationsCount = state.dbCitations.reduce((acc, citation) => {
             const authorType = getAuthorTypeFromID(state, citation.idTypeAuteur)
-            acc[authorType] = (acc[authorType] || 0) + 1;
+            acc[authorType] = (acc[authorType] || 0) + 1
             return acc
         }, {})
         const tab = Object.entries(citationsCount).map( pair => {
@@ -97,7 +97,6 @@ export default {
         const sortConneries = tab.sort((a, b) => {
             return Number(b.nbCitationsAuthorType) - Number(a.nbCitationsAuthorType)
         })
-        
         return {
             ...state,
             topConneries: sortConneries
@@ -149,7 +148,7 @@ export default {
 
             const citationsCount = state.dbCitations.reduce((acc, citation) => {
                 const author = getAuthorTypeFromID(state, citation.idTypeAuteur)
-                acc[author] = (acc[authorType] || 0) + 1; // Où placer la date ?
+                acc[author] = (acc[authorType] || 0) + 1 // Où placer la date ?
                 return acc
             }, {})
             const tab = Object.entries(citationsCount).map(pair => {
@@ -159,11 +158,8 @@ export default {
                     nbCitationsAuthorType: count
                 }
             })
-
             return tabYear;
-        
         }
-
         return {
             ...state,
             nbCitationsYears : tabYear

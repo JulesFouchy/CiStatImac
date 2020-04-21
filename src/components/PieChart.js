@@ -36,7 +36,7 @@ export default (props) =>
                                     const meta = dataset._meta[Object.keys(dataset._meta)[0]]
                                     const total = meta.total
                                     const currentValue = dataset.data[tooltipItem.index]
-                                    const percentage = parseFloat((currentValue/total*100).toFixed(1))
+                                    const percentage = parseFloat((currentValue / total * 100).toFixed(1))
                                     return ' ' + currentValue + ' (' + percentage + '%)'
                                 },
                                 title: (tooltipItem, data) => {
