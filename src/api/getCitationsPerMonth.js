@@ -63,7 +63,7 @@ export default async (state) => {
 const getSchoolYear = (date) => {
     const _date = new Date(date)
     const year = _date.getFullYear()
-    if (_date.getMonth() < 9) // before september
+    if (_date.getMonth() < 8) // before september
         return year - 1
     else
         return year
