@@ -82,7 +82,7 @@ const countPerAuthorAndYear = (data) => {
     }))
     data.forEach( citation => {
         const index = getYearIndex(citation['dateCitation'])
-        dataWithArrays.find( el => el['id'] === citation['idTypeAuteur'])['data'][index] += 1
+        dataWithArrays.find( el => el['id'] == citation['idTypeAuteur'])['data'][index] += 1
     })
     return dataWithArrays
 }
