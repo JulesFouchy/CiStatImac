@@ -2,6 +2,7 @@ import axios from 'axios'
 import getAuthorTypeFromID from '../helper/getAuthorTypeFromID'
 import setOverTimeToYears from '../overTimeChart/setToYears'
 import setOverTimeToMonths from '../overTimeChart/setToMonths'
+import getCitationsPerMonth from '../api/getCitationsPerMonth'
 
 export default {
     loadDatabase: () => (state, actions) => {
@@ -121,10 +122,14 @@ export default {
             bShowYears: !state.bShowYears
         }
     },
-    setSelectedSchoolYear: (year) => state => ({
-        ...state,
-        selectedSchoolYear: year
-    }),
+    setSelectedSchoolYear: (year) => (state, actions) => {
+        const newState = {
+            ...state,
+            selectedSchoolYear: year
+        }
+        getCitationsPerMonth(newState).then( data => actions.setCitationsPerMonth(data) )
+        return newState
+    },
     computeYearList: () => state => {
         const currentYear = new Date().getFullYear()
         const nbYears = currentYear - 2019 + 1

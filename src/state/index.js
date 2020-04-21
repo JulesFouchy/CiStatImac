@@ -30,16 +30,7 @@ export default {
     yearsDatasets: [],
     // Months
     selectedSchoolYear: 0,
-    monthsDatasets: [
-        {
-            label: 'imac 2021',
-            data: [10, 20, 10, 20, 50, 45, 10, 20, 10, 20, 50, 45]
-        },
-        {
-            label: 'imac 2022',
-            data: [100, 20, 10, 20, 50, 45, 10, 20, 10, 20, 50, 45]
-        }
-    ],
+    monthsDatasets: [],
     //
     overTimeChart: null,
 }

@@ -15,7 +15,6 @@ export default (state, actions) =>
                 actions.loadDatabase()
                 actions.computeYearList()
                 getCitationsPerYear().then( response => actions.setCitationsPerYear(response) )
-                getCitationsPerMonth().then( response => actions.setCitationsPerMonth(response) )
             }
         },
         // ------------- SECTIONS --------------
