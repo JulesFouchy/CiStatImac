@@ -24,9 +24,21 @@ export default {
     // -------- TOP CONNERIES --------
     topConneries: [],
     // -------- OVER TIME ------------
-    bShowYears: true,
+    bShowYears: false,
+    // Years
     yearsList: [],
     yearsDatasets: [],
-    monthsDatasets: [],
+    // Months
+    monthsDatasets: [
+        {
+            label: 'imac 2021',
+            data: [10, 20, 10, 20, 50, 45, 10, 20, 10, 20, 50, 45]
+        },
+        {
+            label: 'imac 2022',
+            data: [100, 20, 10, 20, 50, 45, 10, 20, 10, 20, 50, 45]
+        }
+    ],
+    //
     overTimeChart: null,
 }

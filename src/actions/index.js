@@ -1,6 +1,7 @@
 import axios from 'axios'
 import getAuthorTypeFromID from '../helper/getAuthorTypeFromID'
 import setOverTimeToYears from '../overTimeChart/setToYears'
+import setOverTimeToMonths from '../overTimeChart/setToMonths'
 
 export default {
     loadDatabase: () => (state, actions) => {
@@ -43,6 +44,12 @@ export default {
         const newState = {...state, yearsDatasets: data}
         if (state.bShowYears)
             setOverTimeToYears(newState)
+        return newState
+    },
+    setCitationsPerMonth: (data) => (state) => {
+        const newState = {...state, monthsDatasets: data}
+        if (!state.bShowYears)
+            setOverTimeToMonths(newState)
         return newState
     },
     /**************************************

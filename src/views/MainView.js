@@ -5,6 +5,7 @@ import TopTags from './TopTags'
 import OverTime from './OverTime'
 import Intro from './Intro'
 import getCitationsPerYear from '../api/getCitationsPerYear'
+import getCitationsPerMonth from '../api/getCitationsPerMonth'
 
 export default (state, actions) =>
     h('div',
@@ -14,6 +15,7 @@ export default (state, actions) =>
                 actions.loadDatabase()
                 actions.computeYearList()
                 getCitationsPerYear().then( response => actions.setCitationsPerYear(response) )
+                getCitationsPerMonth().then( response => actions.setCitationsPerMonth(response) )
             }
         },
         // ------------- SECTIONS --------------
