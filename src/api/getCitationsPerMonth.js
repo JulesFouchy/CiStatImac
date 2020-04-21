@@ -81,7 +81,7 @@ const countPerAuthorAndMonth = (data, year) => {
     data.forEach( citation => {
         if (year === getSchoolYear(citation['dateCitation'])) {
             const index = getMonthIndex(citation['dateCitation'])
-            dataWithArrays.find( el => el['id'] === citation['idTypeAuteur'])['data'][index] += 1
+            dataWithArrays.find( el => el['id'] == citation['idTypeAuteur'])['data'][index] += 1
         }
     })
     return dataWithArrays
