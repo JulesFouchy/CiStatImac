@@ -60,11 +60,19 @@ export default async () => {
         .catch( error => console.log(error) )
 }
 
+const getSchoolYear = (date) => {
+    const _date = new Date(date)
+    const year = _date.getFullYear()
+    if (_date.getMonth() < 8) // before september
+        return year - 1
+    else
+        return year
+}
 const nbYears = () => {
-    return new Date().getFullYear() - 2019 + 1
+    return getSchoolYear(new Date()) - 2018 + 1
 }
 const getYearIndex = (date) => {
-    return new Date(date).getFullYear() - 2019
+    return getSchoolYear(date) - 2018
 }
 
 const countPerAuthorAndYear = (data) => {
