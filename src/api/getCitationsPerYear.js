@@ -61,10 +61,10 @@ export default async () => {
 }
 
 const nbYears = () => {
-    return new Date().getFullYear() - 2018 + 1
+    return new Date().getFullYear() - 2019 + 1
 }
 const getYearIndex = (date) => {
-    return new Date(date).getFullYear() - 2018
+    return new Date(date).getFullYear() - 2019
 }
 
 const countPerAuthorAndYear = (data) => {

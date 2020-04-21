@@ -10,10 +10,6 @@ export default (props) =>
             id: 'monthSelector',
         },
             [
-                h('option', {
-                    value: '2018',
-                    label: '2018'
-                }),
                 h('option',{
                      
                 value: '2019',
