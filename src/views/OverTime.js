@@ -14,7 +14,7 @@ export default (state, actions) => {
                 h('div', { class: 'myBarChart' }, 
                     BarChart({
                         callback: (chart) => {
-                            actions.setYearChart(chart)
+                            actions.setOverTimeChart(chart)
                         }
                     })
                 ),

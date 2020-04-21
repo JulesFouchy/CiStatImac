@@ -99,9 +99,9 @@ export default {
           CITATIONS A TRAVERS LE TEMPS
     **************************************/
 
-    setYearChart: (chart) => state => ({
+    setOverTimeChart: (chart) => state => ({
         ...state,
-        yearChart: chart
+        overTimeChart: chart
     }),
     computeYearList: () => state => {
         const currentYear = new Date().getFullYear()
