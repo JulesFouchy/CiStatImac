@@ -40,7 +40,7 @@ export default {
         return {...state, dbTypesAuteur: typesAuteur}
     },
     setCitationsPerYear: (data) => (state) => {
-        const newState = {...state, yearDataset: data}
+        const newState = {...state, yearDatasets: data}
         updateYearChartData(newState)
         return newState
     },

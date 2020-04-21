@@ -26,6 +26,6 @@ export default {
     // -------- OVER TIME ------------
     showYears: true,
     yearsList: [],
-    yearDataset: [],
+    yearDatasets: [],
     yearChart: null,
 }
