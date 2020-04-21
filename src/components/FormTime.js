@@ -12,6 +12,8 @@ export default (state, actions, props) =>
             {
                 hidden : state.bShowYears,
                 id: 'monthSelector',
+                oncreate: () => actions.setSelectedSchoolYear(getSchoolYear(new Date())),
+                onchange: (event) => actions.setSelectedSchoolYear(Number(event.target.selectedOptions[0].value))
             },
             schoolYearsOptionsList()
         )
@@ -34,8 +36,8 @@ const schoolYearsOptionsList = () => {
         const year = currYear - index
         const str = year + '-' + (year + 1)
         return h('option', {
-            value: str,
-            label: str
+            label: str,
+            value: year,
         })
     })
     return list

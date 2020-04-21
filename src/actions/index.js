@@ -121,6 +121,10 @@ export default {
             bShowYears: !state.bShowYears
         }
     },
+    setSelectedSchoolYear: (year) => state => ({
+        ...state,
+        selectedSchoolYear: year
+    }),
     computeYearList: () => state => {
         const currentYear = new Date().getFullYear()
         const nbYears = currentYear - 2019 + 1

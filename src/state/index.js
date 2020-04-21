@@ -29,6 +29,7 @@ export default {
     yearsList: [],
     yearsDatasets: [],
     // Months
+    selectedSchoolYear: 0,
     monthsDatasets: [
         {
             label: 'imac 2021',
