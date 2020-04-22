@@ -576,9 +576,247 @@ $citationHeight: 68px;
 }
 
 @media (max-width:970px) {
+	/* -------------- BODY ------------- */
+	body {
+		margin: 1% 2%;
+	}
+	
+	.section {
+		margin-top: 3%;
+	}
+	
+	#allSections {
+		display : flex;
+		flex-direction: column;
+	}
+	
+	#sectionsLeft{
+		display : flex;
+		flex-direction: column;
+	}
+	
+	#sectionsRight{
+		display : flex;
+		flex-direction: column;
+	}
+	
+	#sectionsBottomRight{
+		display : flex;
+		flex-direction: column;
+	}
+	
+	/* ---------- COMPONENTS ----------- */
+	.rankingNumber {
+		font-size: 0.9em;
+	}
+	
+	.highlightedRankingNumber {
+		font-size: 1.3em;
+	}
+	
+	/* ------------- SECTION ----------- */
+	.sectionTitle {
+		font-size: 1em;
+	}
+	
+	/* -------------- INTRODUCTION ------------- */
+	#intro {
+		width: 380px;
+	}
+	
+	.introText {
+		font-size: 0.73em;
+	}
+	
+	.citatimacButton .box {
+		padding: 2% 2%;
+		font-size: 0.7em;
+	}
+	
+	/* ----------- TOP DES CITATIONS ----------- */
+	$citationHeight: 85px;
+	
+	#topCitations { 
+		width: 380px;
+		height: 80%;
+		display: flex;
+		flex-direction: column;
+	
+		.box {
+			width: $citationHeight - 8;
+			height: $citationHeight - 5;
+			font-size: 0.8em;
+			.nbLikes {
+				font-size: 1.1em;
+			}
+		}
+	}
+	
+	.citationText {
+		margin-block-start: 0.3em;
+	}
+	.citationAuthor {
+		font-size: 0.7em;
+		margin-bottom: -10px;
+		line-height: 1em;
+	}
+	
+	.citationContainer {
+		margin-bottom : 5%;
+	}
+	
+	.citationTextAndAuthor {
+		margin-left: 10%;
+	}
+	
+	.pageNavigation {
+		font-size: 0.7em;
+		padding-top: 2%;
+		margin-bottom: 2%;
+	}
+	
+	/* ----------- TOP DES CONNERIES ----------- */
+	#topConneries { 
+		width: 380px;
+		padding-top:2%;
+	}
+	
+	/* ------------- TOP DES TAGS -------------- */
+	 #topTags {
+		width: 380px;
+		padding-top:2%;
+	 }
+	
+	/* --------- CITATIONS PAR PERIODE --------- */
+	#overTime {
+		width: 380px;
+	}
+	
+	.formTime{
+		margin-bottom: 5%;
+	}
+	
+	}
 
+@media (max-width:560px) {
+/* -------------- BODY ------------- */
 body {
-	background: $myViolet;
+	margin: 1% 2%;
+}
+
+.section {
+	margin-top: 3%;
+}
+
+#allSections {
+	display : flex;
+	flex-direction: column;
+}
+
+#sectionsLeft{
+	display : flex;
+	flex-direction: column;
+}
+
+#sectionsRight{
+	display : flex;
+	flex-direction: column;
+}
+
+#sectionsBottomRight{
+	display : flex;
+	flex-direction: column;
+}
+
+/* ---------- COMPONENTS ----------- */
+.rankingNumber {
+	font-size: 0.9em;
+}
+
+.highlightedRankingNumber {
+	font-size: 1.3em;
+}
+
+/* ------------- SECTION ----------- */
+.sectionTitle {
+	font-size: 0.9em;
+}
+
+/* -------------- INTRODUCTION ------------- */
+#intro {
+	width: 280px;
+}
+
+.introText {
+	font-size: 0.73em;
+}
+
+.citatimacButton .box {
+	padding: 2% 2%;
+	font-size: 0.7em;
+}
+
+/* ----------- TOP DES CITATIONS ----------- */
+$citationHeight: 85px;
+
+#topCitations { 
+	width: 280px;
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+
+	.box {
+		width: $citationHeight - 30;
+		height: $citationHeight - 5;
+		font-size: 0.8em;
+		.nbLikes {
+			font-size: 1.1em;
+		}
+	}
+}
+
+.citationText {
+	margin-block-start: 0.3em;
+}
+.citationAuthor {
+	font-size: 0.7em;
+	margin-bottom: -10px;
+	line-height: 1em;
+}
+
+.citationContainer {
+	margin-bottom : 5%;
+}
+
+.citationTextAndAuthor {
+	margin-left: 10%;
+}
+
+.pageNavigation {
+	font-size: 0.7em;
+	padding-top: 2%;
+	margin-bottom: 2%;
+}
+
+/* ----------- TOP DES CONNERIES ----------- */
+#topConneries { 
+	width: 280px;
+	padding-top:4%;
+}
+
+/* ------------- TOP DES TAGS -------------- */
+ #topTags {
+	width: 280px;
+	padding-top:4%;
+ }
+
+/* --------- CITATIONS PAR PERIODE --------- */
+#overTime {
+	width: 280px;
+}
+
+.formTime{
+	margin-bottom: 5%;
 }
 
 }
