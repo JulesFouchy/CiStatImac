@@ -8,6 +8,7 @@ export default (props) =>
         h('canvas', {
             oncreate: (element) => {
                 const ctx = element.getContext('2d')
+                Chart.defaults.global.defaultFontSize = 11
                 const c = new Chart(ctx, {
                     type: 'bar',
                     data: {
@@ -56,7 +57,8 @@ export default (props) =>
                 })
                 if (props.callback !== undefined) { props.callback(c) }
             },
-            style: 'background-color: #fff; width : 39%; margin-top : 2%;'
+            height: 200,
+            //style: 'background-color: #fff; width : 39%; margin-top : 2%;'
         })
     ])
     

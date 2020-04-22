@@ -6,7 +6,7 @@ $myBlue: #8B9AFF;
 $myGreyE5: #E5E5E5;
 $myBg: #F9F9F9;
 
-$defaultTextSize: 13px;
+$defaultTextSize: 12px;
 
 /* --------------------------------- */
 /* -------------- BODY ------------- */
@@ -14,8 +14,8 @@ $defaultTextSize: 13px;
 
 body {
 	font-family: Roboto;
-	padding: 0; 
-	margin: 1% 5% 1% 5%;
+	//padding: 0; 
+	margin: 1% 5%;
 	align-items: center;
 	justify-content: center;
 	background: $myGreyE5;
@@ -31,7 +31,7 @@ a:hover {
 }
 
 .section {
-	margin: 12px;
+	margin: 8px;
 }
 
 #allSections {
@@ -39,13 +39,10 @@ a:hover {
  justify-content: space-around;
 }
 
-
-
 #sectionsLeft{
 	display : flex;
 	flex-direction: column;
  	justify-content: space-between;
-
 }
 
 #sectionsLeft:nth-child(1)
@@ -120,9 +117,9 @@ a:hover {
 .rankingNumber {
 	font-family: Lato;
 	font-style: normal;
-	font-weight: 900;
-	font-size: 20px;
-	line-height: 20px;
+	font-weight: bold;
+	font-size: 1.1em;
+	//line-height: 20px;
 
 	color: $myOrange;
 
@@ -132,7 +129,7 @@ a:hover {
 }
 
 .highlightedRankingNumber {
-	font-size: 35px;
+	font-size: 1.9em;
 	color: $myViolet;
 }
 
@@ -143,16 +140,16 @@ a:hover {
 .section {
 	background-color: white;
 	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-	padding: 2%;
+	padding: 3%;
 }
 .sectionTitle {
 	color: #464646;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 1.25em;
+	font-size: 1.1em;
 	line-height: 0px;
-
-	margin-bottom: 30px;
+	
+	margin-bottom: 25px;
 
 	text-align: left;
 }
@@ -162,49 +159,48 @@ a:hover {
 /* ----------------------------------------- */
 
 #intro {
-	height : 18%;
+	//height : 15%;
 }
 
 .introText {
-	font-size: 0.9em;
+	font-size: 0.85em;
 	line-height: auto;
-	height : 30%;
 	color: $myGrey75;
 }
 
 .citatimacButton .box {
 	width: 23%;
-	padding: 2% 0;
+	padding: 2% 1%;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 0.8em;
 	letter-spacing: 0.05em;
-	border : 2px solid $myViolet;
+	//border : 2px solid $myViolet;
 
 }
 
 .citatimacButton:hover .box:hover {
-	background-color : white;
-	color : $myViolet;
+	background-color : $myOrange;
+	color : white;
 	
 }
 
 /* ----------------------------------------- */
 /* ----------- TOP DES CITATIONS ----------- */
 /* ----------------------------------------- */
+$citationHeight: 68px;
 
 #topCitations { 
-	height: 90%;
-
+	height: 80%;
 	display: flex;
 	flex-direction: column;
 
 	.box {
-		width: 75%;
-		height: 80%;
-		font-size: 13px;
+		width: $citationHeight;
+		height: $citationHeight;
+		font-size: 0.8em;
 		.nbLikes {
-			font-size: 16px;
+			font-size: 1.2em;
 			font-weight: bold;
 		}
 	}
@@ -217,26 +213,25 @@ a:hover {
 	line-height: 13px;
 	overflow: auto;
 	height: auto;
-	margin-block-start: 0.6em;
-
+	margin-block-start: 0.5em;
 	color: $myGrey75;
 	flex-grow: 1;
 }
 .citationAuthor {
 	font-style: normal;
 	font-weight: normal;
-	font-size: 12px;
+	font-size: 0.75em;
 	line-height: 5px;
 	color: #BEBEBE;
 	align-self: flex-start;
-	margin-bottom: 5px;
+	margin-bottom: 2px;
 }
 
 .citationContainer {
 	margin-bottom : 4%;
-	margin-left : 3%;
-	width: 90%;
-	height : 20%;
+	margin-left : 0%;
+	width: 95%;
+	//height : 20%;
 
 	display: grid;
 	grid-template-columns: 10% 17% 73%;
@@ -256,13 +251,16 @@ a:hover {
 	display: flex;
 	align-items: flex-start;
 	flex-direction: column;
-	height: 100%;
+	height: $citationHeight;
+	margin-left: 5%;
+	display: flex;
+	flex-direction: column;
 }
 
 .pageNavigation {
 	font-size: 0.8em;
+	padding-top: 1%;
 	color: #6C6C6C;
-	margin-top : 25%;
 	display: flex;
 	justify-content: center;
 	.pageNavInput {
@@ -319,24 +317,25 @@ a:hover {
 /* ----------------------------------------- */
 
 #topConneries { 
-	width: 30%;
+	width: 35%;
 	display: flex;
 	flex-direction: column;
+	padding-top:2%;
+	padding-bottom:2%;
 
 	.conneriesAuthorList{
-		margin-left : 5%;
-		margin-right : 5%;
+		
 	}
 
 	.authorType {
-		font-size: 12px;
+		font-size: 0.8em;
 		color: $myGrey75;
 	}
 	.box {
-		padding: 4px 0;
+		padding: 4% 1%;
 		background-color: $myOrange;
 		.nbCitationsAuthorType {
-			font-size: 14px;
+			font-size: 0.85em;
 			font-weight: bold;
 		}
 	}
@@ -345,7 +344,7 @@ a:hover {
 			background-color: $myViolet;
 		}
 		.authorType {
-			font-size: 14px;
+			font-size: 0.8em;
 			font-weight: bold;
 			color: $myViolet;
 		}
@@ -353,10 +352,8 @@ a:hover {
 }
 
 .conneriesContainer {
-	margin-top: 0px;
-	margin-bottom : 3%;
 	width: 95%;
-
+	margin: 0;
 	display: grid;
 	grid-template-columns: 10% 60% 32%;
 	
@@ -376,14 +373,22 @@ a:hover {
 /* ----------------------------------------- */
 
  #topTags {
-	width: 60%;
+	width: 50%;
 	display : flex;
 	flex-direction : column;
+	padding-top:2%;
+	padding-bottom:2%;
  }
 
 /* ----------------------------------------- */
 /* --------- CITATIONS PAR PERIODE --------- */
 /* ----------------------------------------- */
+#overTime {
+	padding:2%;
+	display: flex;
+	flex-direction : column;
+	width: 94%;
+}
 
 .formTime{
 	text-align: right;
@@ -415,7 +420,6 @@ a:hover {
 	select:disabled{
 	
 	/* Base/White */
-
 	background: #FFFFFF;
 	border: 1px solid #DADADA;
 	box-sizing: border-box;
@@ -428,9 +432,8 @@ a:hover {
 	}
 
 	select:enabled{
-	
-	/* Selected*/
 
+	/* Selected*/
 	background: #FFFFFF;
 	border: 1px solid #9C9C9C;
 	box-sizing: border-box;
@@ -441,6 +444,141 @@ a:hover {
 	width: auto;
 	height: 25px;
 	}
+}
 
+
+
+/***************************************/
+/************* RESPONSIVE **************/
+/***************************************/
+
+@media (max-width:1415px) {
+ 
+/* -------------- BODY ------------- */
+body { 
+	margin: 1% 2%;
+}
+
+.section {
+	margin: 5px;
+}
+
+/* ------------- SECTION ----------- */
+.sectionTitle {
+	font-size: 1em;
+}
+
+/* -------------- INTRODUCTION ------------- */
+.introText {
+	font-size: 0.75em;
+}
+
+/* ----------- TOP DES CITATIONS ----------- */
+.citationTextAndAuthor {
+	margin-left: 10%;
+}
+
+.pageNavigation {
+	font-size: 0.7em;
+}
+
+/* ----------- TOP DES CONNERIES ----------- */
+#topConneries { 
+	.box {
+		.nbCitationsAuthorType {
+			font-size: 0.75em;
+		}
+	}
+}
+
+/* ------------- TOP DES TAGS -------------- */
+ #topTags {
+	width: 49%;
+ }
+
+}
+
+@media (max-width:1100px) {
+/* -------------- BODY ------------- */
+body {
+	margin: 1% 1%;
+}
+
+/* ---------- COMPONENTS ----------- */
+.rankingNumber {
+	font-size: 1em;
+}
+
+.highlightedRankingNumber {
+	font-size: 1.75em;
+}
+
+/* ------------- SECTION ----------- */
+.sectionTitle {
+	font-size: 0.9em;
+	margin-bottom: 20px;
+}
+
+/* -------------- INTRODUCTION ------------- */
+.introText {
+	font-size: 0.7em;
+}
+
+.citatimacButton .box {
+	width: 28%;
+	font-size: 0.7em;
+}
+/* ----------- TOP DES CITATIONS ----------- */
+$citationHeight: 68px;
+
+#topCitations { 
+	height: 80%;
+	.box {
+		width: $citationHeight - 5;
+		height: $citationHeight - 5;
+		font-size: 0.7em;
+		.nbLikes {
+			font-size: 1.1em;
+		}
+	}
+}
+
+.citationText {
+	font-size: 0.7em;
+	line-height: 12px;
+}
+
+.citationAuthor {
+	font-size: 0.7em;
+	line-height: 5px;
+	margin-bottom: 2px;
+}
+
+.citationContainer {
+	margin-bottom : 4%;
+	margin-left : 0%;
+	width: 95%;
+}
+
+.citationTextAndAuthor {
+	height: $citationHeight;
+	margin-left: 11%;
+}
+
+/* ----------- TOP DES CONNERIES ----------- */
+#topConneries { 
+	width: 35%;
+	.authorType {
+		font-size: 0.7em;
+	}
+}
+
+}
+
+@media (max-width:970px) {
+
+body {
+	background: $myViolet;
+}
 
 }

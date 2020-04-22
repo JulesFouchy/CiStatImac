@@ -50,7 +50,6 @@ export default (state) => {
                             '#C535C8',
                             '#439E2D',
                         ]
-                        //
                         chart.update({duration: 800})
                     }
                 })
