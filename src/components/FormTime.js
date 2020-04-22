@@ -11,12 +11,12 @@ export default (state, actions, props) =>
             },
             schoolYearsOptionsList()
         ),
+        h('button', {disabled : !state.bShowYears, onclick: actions.switchOverTimeChart},
+            'Par mois'
+        ),
         h('button', {disabled : state.bShowYears, onclick: actions.switchOverTimeChart},
             'Par année'
         ),
-        h('button', {disabled : !state.bShowYears, onclick: actions.switchOverTimeChart},
-            'Par mois'
-        )
         //Bouton byMonth
         // Slider pour les mois / années
     ])
