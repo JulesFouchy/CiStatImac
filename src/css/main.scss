@@ -392,6 +392,11 @@ $citationHeight: 68px;
 
 .formTime{
 	text-align: right;
+
+	select:focus {
+		outline: none;
+	}
+
 	button {
 		&:enabled {
 			background: rgba(201, 201, 201, 0.1);
