@@ -8,11 +8,16 @@ export default (props) =>
             oncreate: () => props.oncreate(),
         },
         [
-            h('button', {
-                class: 'dropdownButton',
-                onclick: toggleDropdown,
-            },
-            props.options[0].label),
+            h('button', 
+                {
+                    class: 'dropdownButton',
+                    onclick: toggleDropdown,
+                },
+                [
+                    h('span', {id: 'ddText'}, props.options[0].label + ' '),
+                    h('i', {class: 'fas fa-angle-down', id: 'ddIcon'}),
+                ]
+            ),
             h('div', {class: 'dropdownContent', id: 'myDropdown'},
                 props.options.map( el =>
                     h('div',
@@ -20,7 +25,7 @@ export default (props) =>
                             ...el,
                             onclick: () => {
                                 props.onchange(el.value)
-                                document.getElementsByClassName('dropdownButton')[0].innerHTML = el.label
+                                document.getElementById('ddText').innerHTML = el.label + ' '
                             }
                         },
                         el.label
@@ -35,7 +40,7 @@ const toggleDropdown = () => {
 }
 
 window.onclick = (event) => {
-    if (!event.target.matches('.dropdownButton')) {
+    if (!(event.target.matches('.dropdownButton') || event.target.matches('#ddText') || event.target.matches('#ddIcon'))) {
         const dropdowns = document.getElementsByClassName("dropdownContent")
         for (let i = 0; i < dropdowns.length; i++) {
             const openDropdown = dropdowns[i]

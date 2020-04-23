@@ -2,8 +2,8 @@ $myOrange: #FDC132;
 $myViolet: #874EDD;
 $myVioletDarker: #723fbf;
 $myGrey75: #757575;
-$myBlue: #8B9AFF;
 $myGreyE5: #E5E5E5;
+$myBlue: #8B9AFF;
 $myBg: #F9F9F9;
 
 $defaultTextSize: 12px;
@@ -102,18 +102,15 @@ a:hover {
 
 /* Dropdown Button */
 .dropdownButton {
-	background-color: #3498DB;
-	color: white;
-	padding: 16px;
-	font-size: 16px;
-	border: none;
-	cursor: pointer;
-  }
-  
-  /* Dropdown button on hover & focus */
-  .dropdownButton:hover, .dropdownButton:focus {
-	background-color: #2980B9;
-  }
+	width : 92px;
+	border: 1px solid #9C9C9C;
+	box-sizing: border-box;
+	color : #9C9C9C;
+	background: white;
+	&:hover, &:focus {
+		background: rgba(201, 201, 201, 0.1);
+	}
+}
   
   /* The container <div> - needed to position the dropdown content */
   .dropdownList {
@@ -441,65 +438,33 @@ $citationHeight: 68px;
 
 .formTime{
 	text-align: right;
-
-	select:focus {
-		outline: none;
-	}
-
 	button {
-		&:enabled {
-			background: rgba(201, 201, 201, 0.1);
-			border-radius: 4px;
-			text-align: center;
-			color : #9C9C9C;
-			margin : 3px;
-			width: 85px;
-			height: 25px;
-			&:focus {
-				outline: none;
+		border-radius: 4px;
+		margin : 3px;
+		height: 25px;
+	}
+	#selectMonthOrYearButtons {
+		button {
+			&:enabled {
+				width: 85px;
+				background: rgba(201, 201, 201, 0.1);
+				text-align: center;
+				color : #9C9C9C;
+				&:focus {
+					outline: none;
+				}
+			}
+			&:disabled {
+				width: 85px;
+				background: $myOrange;
+				mix-blend-mode: normal;
+				border: 1px solid #FDD31C;
+				box-sizing: border-box;
+				text-align: center;
+				font-style : bold;
+				color : white;
 			}
 		}
-		&:disabled {
-			background: $myOrange;
-			mix-blend-mode: normal;
-			border: 1px solid #FDD31C;
-			box-sizing: border-box;
-			border-radius: 4px;
-			text-align: center;
-			font-style : bold;
-			color : white;
-			margin : 3px;
-			width: 85px;
-			height: 25px;
-		}
-	}
-
-	select:disabled{
-	
-	/* Base/White */
-	background: #FFFFFF;
-	border: 1px solid #DADADA;
-	box-sizing: border-box;
-	border-radius: 4px;	
-	text-align : center;
-	color: #B7B7B7;
-	margin : 3px;
-	width: auto;
-	height: 25px;
-	}
-
-	select:enabled{
-
-	/* Selected*/
-	background: #FFFFFF;
-	border: 1px solid #9C9C9C;
-	box-sizing: border-box;
-	border-radius: 4px;	
-	color: #9C9C9C;
-	font-style : bold;
-	margin : 3px;
-	width: auto;
-	height: 25px;
 	}
 }
 
