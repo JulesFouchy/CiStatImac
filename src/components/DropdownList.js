@@ -35,8 +35,19 @@ export default (props) =>
         ]
     )
 
+const setIconUp = () => {
+    document.getElementById('ddIcon').className = 'fas fa-angle-up'
+}
+const setIconDown = () => {
+    document.getElementById('ddIcon').className = 'fas fa-angle-down'
+}
+
 const toggleDropdown = () => {
-    document.getElementById("myDropdown").classList.toggle("show");
+    if (document.getElementById("myDropdown").classList.contains("show"))
+        setIconDown()
+    else 
+        setIconUp()
+    document.getElementById("myDropdown").classList.toggle("show")
 }
 
 window.onclick = (event) => {
@@ -48,5 +59,6 @@ window.onclick = (event) => {
                 openDropdown.classList.remove('show')
             }
         }
+        setIconDown()
     }
   }
