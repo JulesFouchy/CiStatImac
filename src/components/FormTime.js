@@ -1,16 +1,15 @@
 import { h } from 'hyperapp'
+import DropdownList from '../components/DropdownList'
 
 export default (state, actions, props) =>
     h('div', {class: 'formTime'}, [
-        h('select',
-            {
-                hidden : state.bShowYears,
-                id: 'monthSelector',
-                oncreate: () => actions.setSelectedSchoolYear(getSchoolYear(new Date())),
-                onchange: (event) => actions.setSelectedSchoolYear(Number(event.target.selectedOptions[0].value))
-            },
-            schoolYearsOptionsList()
-        ),
+        DropdownList({
+            hidden : state.bShowYears,
+            id: 'monthSelector',
+            oncreate: () => actions.setSelectedSchoolYear(getSchoolYear(new Date())),
+            onchange: (value) => actions.setSelectedSchoolYear(Number(value)),
+            options: schoolYearsOptionsList(),
+        }),
         h('button', {disabled : !state.bShowYears, onclick: actions.switchOverTimeChart},
             'Par mois'
         ),
@@ -35,10 +34,10 @@ const schoolYearsOptionsList = () => {
     const list = new Array(nbYears).fill('').map( (el, index) => {
         const year = currYear - index
         const str = year + '-' + (year + 1)
-        return h('option', {
+        return {
             label: str,
             value: year,
-        })
+        }
     })
     return list
 }
