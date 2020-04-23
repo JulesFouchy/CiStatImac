@@ -11,6 +11,7 @@ export default (props) =>
             h('button', 
                 {
                     class: 'dropdownButton',
+                    hidden: props.hidden,
                     onclick: toggleDropdown,
                 },
                 [
@@ -45,7 +46,7 @@ const setIconDown = () => {
 const toggleDropdown = () => {
     if (document.getElementById("myDropdown").classList.contains("show"))
         setIconDown()
-    else 
+    else
         setIconUp()
     document.getElementById("myDropdown").classList.toggle("show")
 }
