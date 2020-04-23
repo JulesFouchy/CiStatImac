@@ -23,13 +23,17 @@ export default (props) =>
                 props.options.map( el =>
                     h('div',
                         {
+                            class: 'dropdownContentElement',
                             ...el,
                             onclick: () => {
                                 props.onchange(el.value)
                                 document.getElementById('ddText').innerHTML = el.label + ' '
                             }
                         },
-                        el.label
+                        [
+                            el.label + ' ',
+                            h('i', {class: 'fas fa-angle-down', style: 'visibility: hidden;', id: 'ddIcon'}),
+                        ]
                     )
                 )
             )
