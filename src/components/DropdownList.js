@@ -11,13 +11,17 @@ export default (props) =>
             h('button', {
                 class: 'dropdownButton',
                 onclick: toggleDropdown,
-            }),
+            },
+            props.options[0].label),
             h('div', {class: 'dropdownContent', id: 'myDropdown'},
                 props.options.map( el =>
                     h('div',
                         {
                             ...el,
-                            onclick: () => props.onchange(el.value)
+                            onclick: () => {
+                                props.onchange(el.value)
+                                document.getElementsByClassName('dropdownButton')[0].innerHTML = el.label
+                            }
                         },
                         el.label
                     )
