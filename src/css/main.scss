@@ -107,8 +107,10 @@ a:hover {
 	box-sizing: border-box;
 	color : #9C9C9C;
 	background: white;
-	&:hover, &:focus {
-		//background: rgba(201, 201, 201, 0.1);
+	&:hover {
+		cursor: pointer;
+	}
+	&:focus {
 		outline: none;
 	}
 }
@@ -323,6 +325,14 @@ $citationHeight: 68px;
 	}
 	.pageNavButtons {
 		display: flex;
+		button {
+			&:hover {
+				cursor: pointer;
+			}
+			&:disabled {
+				cursor: default;
+			}
+		}
 	}
 
 	input {
@@ -462,6 +472,9 @@ $citationHeight: 68px;
 				color : #9C9C9C;
 				&:focus {
 					outline: none;
+				}
+				&:hover {
+					cursor: pointer;
 				}
 			}
 			&:disabled {
