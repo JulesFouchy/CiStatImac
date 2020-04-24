@@ -140,5 +140,5 @@ export default {
             ...state,
             yearsList: yearsList
         }
-    },    
+    },
 }

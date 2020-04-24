@@ -5,7 +5,6 @@ import TopTags from './TopTags'
 import OverTime from './OverTime'
 import Intro from './Intro'
 import getCitationsPerYear from '../api/getCitationsPerYear'
-import getCitationsPerMonth from '../api/getCitationsPerMonth'
 
 export default (state, actions) =>
     h('div',

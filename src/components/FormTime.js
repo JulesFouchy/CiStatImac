@@ -1,7 +1,7 @@
 import { h } from 'hyperapp'
 import DropdownList from '../components/DropdownList'
 
-export default (state, actions, props) =>
+export default (state, actions) =>
     h('div', {class: 'formTime'}, [
         DropdownList({
             hidden : state.bShowYears,

@@ -11,7 +11,7 @@ export default async (state) => {
             return axios.get('https://citatapi.herokuapp.com/allCitations')
                 .then( response => countPerAuthorAndMonth(response.data, state.selectedSchoolYear, auteursParsed) )
                 .catch( error => console.log(error) )
-            })
+        })
         .catch( error => console.log(error) )
 }
 
@@ -29,14 +29,14 @@ const getMonthIndex = (date) => {
 }
 
 const countPerAuthorAndMonth = (data, year, authors) => {
-    let dataWithArrays = authors.map( obj => ({
+    const dataWithArrays = authors.map( obj => ({
         ...obj,
         data: new Array(12).fill(0)
     }))
     data.forEach( citation => {
         if (year === getSchoolYear(citation['dateCitation'])) {
             const index = getMonthIndex(citation['dateCitation'])
-            dataWithArrays.find( el => el['id'] == citation['idTypeAuteur'])['data'][index] += 1
+            dataWithArrays.find( el => el['id'] === citation['idTypeAuteur'])['data'][index] += 1
         }
     })
     return dataWithArrays

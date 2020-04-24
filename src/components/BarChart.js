@@ -1,8 +1,6 @@
 import { h } from 'hyperapp'
-// import Plotly from 'plotly.js-dist'
 import Chart from 'chart.js'
 
-// basic componant with props
 export default (props) =>
     h('div', {}, [
         h('canvas', {
@@ -40,7 +38,6 @@ export default (props) =>
                                 label: (tooltipItem, data) =>  {
                                     const dataset = data.datasets[tooltipItem.datasetIndex]
                                     const currentValue = dataset.data[tooltipItem.index]
-                                    const meta = dataset._meta[Object.keys(dataset._meta)[0]]
                                     const total = data.datasets.reduce( (acc, el) => {
                                         return acc + el.data[tooltipItem.index]
                                     }, 0)
@@ -61,4 +58,3 @@ export default (props) =>
             //style: 'background-color: #fff; width : 39%; margin-top : 2%;'
         })
     ])
-    

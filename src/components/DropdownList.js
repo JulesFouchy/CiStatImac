@@ -1,14 +1,14 @@
 import { h } from 'hyperapp'
 
 export default (props) =>
-    h('span', 
+    h('span',
         {
             class: 'dropdownList',
             id: props.id,
             oncreate: () => props.oncreate(),
         },
         [
-            h('button', 
+            h('button',
                 {
                     class: 'dropdownButton',
                     hidden: props.hidden,
@@ -48,16 +48,16 @@ const setIconDown = () => {
 }
 
 const toggleDropdown = () => {
-    if (document.getElementById("myDropdown").classList.contains("show"))
+    if (document.getElementById('myDropdown').classList.contains('show'))
         setIconDown()
     else
         setIconUp()
-    document.getElementById("myDropdown").classList.toggle("show")
+    document.getElementById('myDropdown').classList.toggle('show')
 }
 
 window.onclick = (event) => {
     if (!(event.target.matches('.dropdownButton') || event.target.matches('#ddText') || event.target.matches('#ddIcon'))) {
-        const dropdowns = document.getElementsByClassName("dropdownContent")
+        const dropdowns = document.getElementsByClassName('dropdownContent')
         for (let i = 0; i < dropdowns.length; i++) {
             const openDropdown = dropdowns[i]
             if (openDropdown.classList.contains('show')) {
@@ -66,4 +66,4 @@ window.onclick = (event) => {
         }
         setIconDown()
     }
-  }
+}

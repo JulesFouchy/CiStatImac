@@ -48,7 +48,7 @@ export default (props) =>
                     },
                 })
                 props.acquireData(chart)
-            }, 
+            },
             height: 175,
         })
     ])
