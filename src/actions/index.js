@@ -99,7 +99,7 @@ export default {
         })
         return {
             ...state,
-            topConneries: sortConneries
+            topConneries: sortConneries.slice(0, 7)
         }
     },
 
