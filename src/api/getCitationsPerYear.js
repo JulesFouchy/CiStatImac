@@ -1,53 +1,18 @@
 import axios from 'axios'
 
-const dataTemplate = [
-    {
-        label: 'IMAC 2022',
-        id: '10',
-        backgroundColor: '#874EDD',
-    },
-    {
-        label: 'IMAC 2021',
-        id: '9',
-        backgroundColor: '#4EDD98',
-    },
-    {
-        label: 'IMAC 2020',
-        id: '8',
-        backgroundColor: '#F45B80',
-    },
-    {
-        label: 'IMAC 2019',
-        id: '7',
-        backgroundColor: '#5CDCEE',
-    },
-    {
-        label: 'IMAC 2018',
-        id: '6',
-        backgroundColor: '#4670DD',
-
-    },
-    {
-        label: 'IMAC 100 AV. BIRI',
-        id: '4',
-        backgroundColor: '#F9822C',
-    },
-    {
-        label: 'PROF',
-        id: '2',
-        backgroundColor: '#FDC132',
-    },
-    {
-        label: 'AUTRE',
-        id: '1',
-        backgroundColor: '#B90000',
-    },
-]
-
 export default async () => {
-    return await axios.get('https://citatapi.herokuapp.com/allCitations')
-        .then( response => countPerAuthorAndYear(response.data) )
-        .catch( error => console.log(error) )
+    return await axios.get('https://citatapi.herokuapp.com/typesAuteur')
+    .then( typesAuteur => {
+        const auteursParsed = typesAuteur.data.reverse().map( el => ({
+            id: el.idTypeAuteur,
+            label: el.nomTypeAuteur,
+            backgroundColor: el.couleur
+        }))
+        return axios.get('https://citatapi.herokuapp.com/allCitations')
+            .then( response => countPerAuthorAndYear(response.data, auteursParsed) )
+            .catch( error => console.log(error) )
+        })
+    .catch( error => console.log(error) )
 }
 
 const getSchoolYear = (date) => {
@@ -65,8 +30,8 @@ const getYearIndex = (date) => {
     return getSchoolYear(date) - 2018
 }
 
-const countPerAuthorAndYear = (data) => {
-    let dataWithArrays = dataTemplate.map( obj => ({
+const countPerAuthorAndYear = (data, auteurs) => {
+    let dataWithArrays = auteurs.map( obj => ({
         ...obj,
         data: new Array(nbYears()).fill(0)
     }))
