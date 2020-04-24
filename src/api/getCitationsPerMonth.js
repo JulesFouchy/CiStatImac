@@ -1,52 +1,17 @@
 import axios from 'axios'
 
-const dataTemplate = [
-    {
-        label: 'IMAC 2022',
-        id: '10',
-        backgroundColor: '#874EDD',
-    },
-    {
-        label: 'IMAC 2021',
-        id: '9',
-        backgroundColor: '#4EDD98',
-    },
-    {
-        label: 'IMAC 2020',
-        id: '8',
-        backgroundColor: '#F45B80',
-    },
-    {
-        label: 'IMAC 2019',
-        id: '7',
-        backgroundColor: '#5CDCEE',
-    },
-    {
-        label: 'IMAC 2018',
-        id: '6',
-        backgroundColor: '#4670DD',
-
-    },
-    {
-        label: 'IMAC 100 AV. BIRI',
-        id: '4',
-        backgroundColor: '#F9822C',
-    },
-    {
-        label: 'PROF',
-        id: '2',
-        backgroundColor: '#FDC132',
-    },
-    {
-        label: 'AUTRE',
-        id: '1',
-        backgroundColor: '#B90000',
-    },
-]
-
 export default async (state) => {
-    return await axios.get('https://citatapi.herokuapp.com/allCitations')
-        .then( response => countPerAuthorAndMonth(response.data, state.selectedSchoolYear) )
+    return await axios.get('https://citatapi.herokuapp.com/typesAuteur')
+        .then( typesAuteur => {
+            const auteursParsed = typesAuteur.data.reverse().map( el => ({
+                id: el.idTypeAuteur,
+                label: el.nomTypeAuteur,
+                backgroundColor: el.couleur
+            }))
+            return axios.get('https://citatapi.herokuapp.com/allCitations')
+                .then( response => countPerAuthorAndMonth(response.data, state.selectedSchoolYear, auteursParsed) )
+                .catch( error => console.log(error) )
+            })
         .catch( error => console.log(error) )
 }
 
@@ -63,8 +28,8 @@ const getMonthIndex = (date) => {
     return (new Date(date).getMonth() + 4) % 12
 }
 
-const countPerAuthorAndMonth = (data, year) => {
-    let dataWithArrays = dataTemplate.map( obj => ({
+const countPerAuthorAndMonth = (data, year, authors) => {
+    let dataWithArrays = authors.map( obj => ({
         ...obj,
         data: new Array(12).fill(0)
     }))
