@@ -35,7 +35,7 @@ npm run dev
 
 # Webpack et le setup en quelques lignes
 
-Merci à Engurrand De Semet pour la template. Ce dernier est configuré pour se servir de différents modules (axios, hyperApp) et via webpack permet de mettre tout en place ensemble.
+Merci à Enguerrand De Smet pour le template. Ce dernier est configuré pour se servir de différents modules (axios, hyperApp) et via webpack permet de mettre tout en place ensemble, compiler le scss en css etc.
 
 Il dispose :
 - d'un serveur intégré pour pouvoir travailler facilement
