@@ -6,7 +6,7 @@ export default (props) =>
         h('canvas', {
             oncreate: (element) => {
                 const ctx = element.getContext('2d')
-                Chart.defaults.global.defaultFontSize = 11
+                Chart.defaults.global.defaultFontSize = 10
                 const c = new Chart(ctx, {
                     type: 'bar',
                     data: {
