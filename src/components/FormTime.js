@@ -24,7 +24,7 @@ export default (state, actions) =>
 
 const getSchoolYear = (date) => {
     const year = date.getFullYear()
-    if (date.getMonth() < 9) // before september
+    if (date.getMonth() < 8) // before september
         return year - 1
     else
         return year
