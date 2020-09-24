@@ -130,8 +130,8 @@ export default {
         return newState
     },
     computeYearList: () => state => {
-        const currentYear = new Date().getFullYear()
-        const nbYears = currentYear - 2019 + 1
+        const date = new Date()
+        const nbYears = date.getFullYear() - 2018 + ((date.getMonth() > 7) ? 1 : 0)
         const yearsList = new Array(nbYears).fill(0).map( (el, index) => {
             const year = 2018 + index
             return year + '-' + (year + 1)
