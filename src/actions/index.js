@@ -7,7 +7,7 @@ import getCitationsPerMonth from '../api/getCitationsPerMonth'
 export default {
     loadDatabase: () => (state, actions) => {
         // ---- CITATIONS ----
-        axios.get('https://citatapi.herokuapp.com/allCitations')
+        axios.get('https://citatapi.cyclic.app/allCitations')
             .then(response => {
                 actions.setCitations(response.data.sort((a, b) => {
                     return Number(b.likesCitation) - Number(a.likesCitation)
@@ -17,13 +17,13 @@ export default {
             })
             .catch(error => { console.log(error) })
         // ---- TAGS ----
-        axios.get('https://citatapi.herokuapp.com/allTags')
+        axios.get('https://citatapi.cyclic.app/allTags')
             .then(response => {
                 actions.setTags(response.data)
             })
             .catch(error => { console.log(error) })
         // ---- AUTHOR TYPE ----
-        axios.get('https://citatapi.herokuapp.com/typesAuteur')
+        axios.get('https://citatapi.cyclic.app/typesAuteur')
             .then(response => {
                 actions.setTypesAuteur(response.data)
                 actions.computeTopConneries()

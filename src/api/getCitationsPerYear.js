@@ -1,14 +1,14 @@
 import axios from 'axios'
 
 export default async () => {
-    return await axios.get('https://citatapi.herokuapp.com/typesAuteur')
+    return await axios.get('https://citatapi.cyclic.app/typesAuteur')
         .then( typesAuteur => {
             const auteursParsed = typesAuteur.data.reverse().map( el => ({
                 id: el.idTypeAuteur,
                 label: el.nomTypeAuteur,
                 backgroundColor: el.couleur
             }))
-            return axios.get('https://citatapi.herokuapp.com/allCitations')
+            return axios.get('https://citatapi.cyclic.app/allCitations')
                 .then( response => countPerAuthorAndYear(response.data, auteursParsed) )
                 .catch( error => console.log(error) )
         })
