@@ -1,6 +1,6 @@
 name: Deploy
 
-on: [push]
+on: workflow_dispatch
 
 jobs:
   build:
@@ -14,3 +14,12 @@ jobs:
           node-version: "12.x"
       - run: npm i
       - run: npm run release
+      - name: Zip files
+        run: |
+          cd ${{github.workspace}}
+          tar -cvzf docs.tar.gz ./docs
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ${{github.workspace}}/docs.tar.gz
